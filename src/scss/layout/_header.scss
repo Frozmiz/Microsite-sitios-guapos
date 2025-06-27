@@ -1,2 +1,51 @@
 @use "../abstracts/_variables" as *;
 @use "../abstracts/_mixins" as *;
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .logo {
+    img {
+      height: 60px; // Ajusta el tamaño según necesites
+      width: auto;
+      // Usar filter para cambiar color de SVG a verde
+      filter: brightness(0) saturate(100%) invert(44%) sepia(86%) saturate(423%)
+        hue-rotate(88deg) brightness(95%) contrast(94%);
+
+      // Si quieres que el logo cambie de color al hacer hover (verde más oscuro)
+      &:hover {
+        filter: brightness(0) saturate(100%) invert(31%) sepia(93%)
+          saturate(440%) hue-rotate(88deg) brightness(89%) contrast(91%);
+      }
+    }
+  }
+
+  nav {
+    ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+
+      li {
+        font-weight: 500;
+
+        a {
+          text-decoration: none;
+          color: #374151;
+          transition: color 0.2s ease;
+
+          &:hover {
+            color: #2563eb;
+          }
+        }
+      }
+    }
+  }
+}
