@@ -1,0 +1,268 @@
+@use "../abstracts/_variables" as *;
+@use "../abstracts/_mixins" as *;
+
+#footer {
+  background-color: $grey;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  @include breakpoint(tablet) {
+  }
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 1460px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include breakpoint(tablet) {
+    padding: 3rem 10rem 3rem;
+  }
+
+  @include breakpoint(desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    text-align: left;
+  }
+
+  .footer__header {
+    @include breakpoint(desktop) {
+      grid-column: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem 3rem 1rem 2rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.1;
+      padding: 3rem 1rem 1rem 1rem;
+      @include breakpoint(tablet) {
+        font-size: 3rem;
+        padding: 1rem;
+        margin: 0 0 1rem 0;
+      }
+      @include breakpoint(desktop) {
+        font-size: 4rem;
+        padding: 0;
+        margin: 0 0 1rem 0;
+      }
+    }
+
+    p {
+      color: $grey-light;
+      font-size: 1rem;
+      @include breakpoint(desktop) {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  .footer__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: 1px solid white;
+    padding-bottom: 5rem;
+
+    @include breakpoint(tablet) {
+      border-bottom: none;
+    }
+
+    @include breakpoint(desktop) {
+      width: 80%;
+      grid-column: 2;
+      border-bottom: none;
+      padding-bottom: 0;
+      padding-top: 2rem;
+    }
+
+    input,
+    textarea {
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid white;
+      padding: 2rem 1rem 1rem 2rem;
+      outline: none;
+      width: 100%;
+      box-sizing: border-box;
+      color: white;
+      font-family: inherit;
+      position: relative;
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+
+      &:focus {
+        border-bottom-color: $green;
+      }
+
+      &.error {
+        border-bottom-color: #ff6f5b;
+      }
+    }
+
+    .form__group {
+      position: relative;
+      margin-bottom: 2rem;
+
+      .error-message {
+        position: absolute;
+        right: 0;
+        bottom: -1.5rem;
+        color: #ff6f5b;
+        font-size: 0.75rem;
+        display: none;
+
+        &.show {
+          display: block;
+        }
+      }
+
+      .error-icon {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        display: none;
+
+        &.show {
+          display: block;
+        }
+      }
+
+      &.has-error {
+        .error-message,
+        .error-icon {
+          display: block;
+        }
+      }
+    }
+
+    .form-textarea {
+      padding-bottom: 2rem;
+    }
+  }
+
+  .footer__bottom {
+    @include breakpoint(tablet) {
+      display: none;
+    }
+
+    @include breakpoint(desktop) {
+      display: none;
+    }
+  }
+
+  .name h2 {
+    font-size: 1.3rem;
+    padding-bottom: 0;
+    padding-top: 2rem;
+  }
+
+  .media {
+    padding: 1rem 1rem 3rem 1rem;
+    @include breakpoint(tablet) {
+      padding: 2rem 0rem 2rem 2rem;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      list-style: none;
+
+      li {
+        a:hover img {
+          filter: brightness(100%) saturate(100%) invert(28%) sepia(19%)
+            saturate(1558%) hue-rotate(115deg) brightness(90%) contrast(83%);
+        }
+      }
+    }
+  }
+}
+
+.footer__container__tablet {
+  display: none;
+
+  @include breakpoint(tablet) {
+    display: block;
+    max-width: 1460px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  .footer__bottom {
+    @include breakpoint(tablet) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 2rem 0;
+      border-top: 1px solid white;
+    }
+
+    .name h2 {
+      @include breakpoint(tablet) {
+        font-size: 1.7rem;
+        font-weight: 500;
+        line-height: 1.1;
+      }
+    }
+
+    .media ul {
+      @include breakpoint(tablet) {
+        display: flex;
+        gap: 1.5rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        a:hover img {
+          filter: brightness(100%) saturate(100%) invert(28%) sepia(19%)
+            saturate(1558%) hue-rotate(115deg) brightness(90%) contrast(83%);
+        }
+      }
+    }
+  }
+}
+
+.form__submit {
+  @include button();
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+  text-decoration: none;
+
+  .button-text {
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+  }
+
+  &:hover {
+    color: #4ee1a0;
+
+    .button-text {
+      color: #4ee1a0;
+    }
+  }
+}

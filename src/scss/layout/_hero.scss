@@ -1,0 +1,331 @@
+@use "../abstracts/_variables" as *;
+@use "../abstracts/_mixins" as *;
+
+.hero {
+  display: block;
+  padding-bottom: 5rem;
+  @include breakpoint(tablet) {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-bottom: 1rem;
+    width: 100%;
+    max-width: none;
+  }
+
+  @include breakpoint(desktop) {
+    display: block;
+    padding-bottom: 0;
+  }
+
+  .hero__top {
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 2rem;
+    @include breakpoint(tablet) {
+      padding-right: 0;
+      width: 100%;
+      align-items: flex-end;
+      position: relative;
+      right: 0;
+    }
+
+    @include breakpoint(desktop) {
+      display: none;
+    }
+
+    &-background {
+      background: linear-gradient(
+        to top,
+        rgba(36, 36, 36, 0.4) 0%,
+        rgba(36, 36, 36, 0.05) 100%
+      );
+      padding-top: 4rem;
+      margin-top: -1rem;
+      height: auto;
+      padding-bottom: 0;
+      @include breakpoint(tablet) {
+        padding-right: 0;
+        width: 100%;
+        margin-right: 0;
+        overflow: hidden;
+      }
+
+      .image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        @include breakpoint(tablet) {
+          width: 100%;
+          justify-content: flex-end;
+        }
+
+        picture {
+          width: 100%;
+          height: 100%;
+          max-width: 100%;
+          @include breakpoint(tablet) {
+            width: 100%;
+            min-height: 500px;
+            max-width: 120%;
+          }
+
+          img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            object-fit: cover;
+            object-position: center;
+            @include breakpoint(tablet) {
+              object-position: right center;
+              max-width: 100%;
+              width: 120%;
+              min-height: 500px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // DESKTOP
+  .heroContainer {
+    @include breakpoint(desktop) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      padding-bottom: 4rem;
+    }
+  }
+
+  .media {
+    flex-wrap: wrap;
+    padding: 0rem 1rem 4rem 1rem;
+    width: 100%;
+    @include breakpoint(tablet) {
+      padding: 0rem 1rem 4rem 1rem;
+    }
+
+    ul {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      @include breakpoint(tablet) {
+        gap: 2rem;
+        justify-content: right;
+      }
+
+      li {
+        img {
+          width: 1.3rem;
+          height: 1.3rem;
+        }
+
+        a:hover img {
+          filter: brightness(100%) saturate(100%) invert(28%) sepia(19%)
+            saturate(1558%) hue-rotate(115deg) brightness(90%) contrast(83%);
+        }
+      }
+    }
+  }
+}
+
+.hero__content {
+  text-align: center;
+  @include breakpoint(tablet) {
+    text-align: left;
+    width: 100%;
+    max-width: 1460px;
+    margin: 0 auto;
+  }
+
+  @include breakpoint(desktop) {
+    padding-left: 0;
+    text-align: left;
+    width: 500px;
+    max-width: 900px;
+    margin: 0;
+    grid-column: 1;
+    order: 1;
+  }
+
+  .name {
+    display: none;
+    @include breakpoint(tablet) {
+      display: block;
+      font-size: 2rem;
+      padding: 2rem 1rem 5rem 0rem;
+      font-weight: 600;
+      color: white;
+    }
+    @include breakpoint(desktop) {
+      padding-top: 0.9rem;
+    }
+  }
+
+  h1 {
+    font-family: $primary-font;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    display: flex;
+    flex-direction: column;
+    @include breakpoint(tablet) {
+      font-size: 3rem;
+      font-weight: 600;
+      padding-bottom: 4rem;
+    }
+
+    .greeting,
+    .name-intro {
+      font-size: inherit;
+      font-weight: inherit;
+      font-family: inherit;
+    }
+
+    .greeting {
+      display: block;
+    }
+
+    .name-intro {
+      display: block;
+
+      .highlighted-name {
+        border-bottom: 4px solid $green;
+        display: inline-block;
+        padding-bottom: 2px;
+        font-size: inherit;
+        font-weight: inherit;
+      }
+    }
+
+    @include breakpoint(tablet) {
+      font-size: 3rem;
+
+      .greeting,
+      .name-intro {
+        display: inline;
+      }
+
+      .highlighted-name {
+        border-bottom: none;
+      }
+    }
+
+    @include breakpoint(desktop) {
+      font-size: 4rem;
+    }
+  }
+
+  p {
+    color: $grey-light;
+    font-family: $primary-font;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    @include breakpoint(tablet) {
+      font-size: 1rem;
+      text-align: left;
+    }
+    @include breakpoint(desktop) {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.button {
+  @include button();
+}
+
+// DESKTOP
+.hero__desktop-image {
+  display: none;
+
+  @include breakpoint(desktop) {
+    display: block;
+    grid-column: 2;
+    order: 2;
+  }
+
+  .hero__top-background {
+    @include breakpoint(desktop) {
+      background: linear-gradient(
+        to top,
+        rgba(36, 36, 36, 0.4) 0%,
+        rgba(36, 36, 36, 0.05) 100%
+      );
+
+      margin-left: 9rem;
+      margin-right: 0;
+      height: auto;
+      overflow: hidden;
+      width: fit-content;
+      border-radius: 8px;
+      position: relative;
+      padding-top: 1.4rem;
+    }
+
+    .media {
+      @include breakpoint(desktop) {
+        width: 100%;
+
+        ul {
+          display: flex;
+          gap: 1.5rem;
+          list-style: none;
+          margin: 0;
+          padding: 1rem 0 0 0;
+          justify-content: right;
+
+          li {
+            img {
+              width: 1.5rem;
+              height: 1.5rem;
+            }
+
+            a:hover img {
+              filter: brightness(100%) saturate(100%) invert(28%) sepia(19%)
+                saturate(1558%) hue-rotate(115deg) brightness(90%) contrast(83%);
+            }
+          }
+        }
+      }
+    }
+
+    .image {
+      @include breakpoint(desktop) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        overflow: visible;
+
+        picture {
+          width: 100%;
+          height: 100%;
+          max-width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            width: 100%;
+            height: auto;
+            max-width: 350px;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+      }
+    }
+  }
+}

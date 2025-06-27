@@ -1,0 +1,128 @@
+@use "../abstracts/_variables" as *;
+@use "../abstracts/_mixins" as *;
+
+// ===================================
+// DECORATIVE BACKGROUNDS
+// ===================================
+// This module handles all decorative SVG backgrounds
+// used throughout the application for visual enhancement
+
+// Hero Section Backgrounds
+.hero {
+  position: relative;
+
+  // Mobile - Solo figure1 como background
+  background-image: url("/img/figure1.svg");
+  background-repeat: no-repeat;
+  background-position: -16rem 6rem;
+  background-size: auto;
+  background-attachment: scroll;
+
+  // Tablet
+  @include breakpoint(tablet) {
+    background-position: -12rem 8rem;
+  }
+
+  // Desktop
+  @include breakpoint(desktop) {
+    background-position: -10rem 10rem;
+  }
+
+  // figure2.svg por encima DESKTOP
+  &::before {
+    // Propiedades base primero
+    content: "";
+    position: absolute;
+    background-image: url("/img/figure2.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    pointer-events: none;
+    z-index: 10;
+
+    // Mobile - posiciones base
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-position: 19rem 19rem;
+
+    // Tablet
+    @include breakpoint(tablet) {
+      top: 0;
+      left: 0;
+      right: 0;
+      background-position: 43rem 34rem;
+    }
+
+    // Desktop
+    @include breakpoint(desktop) {
+      top: 22rem;
+      left: 0;
+      right: 0;
+      background-position: 46rem 5rem;
+    }
+
+    @include breakpoint(desktopxl) {
+      top: 0;
+      left: 0;
+      right: 0;
+      background-position: 57rem 15rem;
+    }
+  }
+}
+
+// Hero Container Background (specific to hero section)
+.mainContainer {
+  position: relative;
+
+  // Mobile
+  background-image: url("/img/figure3.svg");
+  background-repeat: no-repeat;
+  background-position: 10rem 35rem;
+  background-size: auto;
+  background-attachment: scroll;
+
+  // Tablet
+  @include breakpoint(tablet) {
+    background-position: 40rem 15rem;
+    background-attachment: scroll;
+  }
+
+  // Desktop
+  @include breakpoint(desktop) {
+    background-position: 64rem 9rem;
+  }
+
+  // Desktop xl
+  @include breakpoint(desktopxl) {
+    background-position: 32rem 19rem;
+  }
+}
+
+// Footer Background
+#footer {
+  // Mobile
+  background-image: url("/img/figure1.svg");
+  background-repeat: no-repeat;
+  background-position: -16rem 28rem;
+  background-size: auto;
+  background-attachment: scroll;
+
+  // Tablet
+  @include breakpoint(tablet) {
+    background-position: -12rem 36rem;
+  }
+
+  // Desktop
+  @include breakpoint(desktop) {
+    background-position: -8rem 19rem;
+  }
+}
+
+// Plantilla
+//
+// .footer {
+//   background-image: url("/img/figure3.svg");
+//   background-repeat: no-repeat;
+//   background-position: left bottom;
+// }

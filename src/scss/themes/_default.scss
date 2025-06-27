@@ -1,0 +1,28 @@
+@use "../abstracts/_variables" as *;
+@use "../abstracts/_mixins" as *;
+
+html * {
+  font-family: $primary-font;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: $black;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}

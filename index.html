@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.ico" />
+    <title>ConquerBlocks-CSS-P4-Portfolio</title>
+  </head>
+
+  <body>
+    <main id="page">
+      <section class="hero">
+        <div class="hero__top">
+          <div class="hero__top-background">
+            <div class="media">
+              <ul>
+                <li>
+                  <a href="#" class="github"
+                    ><img src="/img/github-icon.svg" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#" class="frontendmentor"
+                    ><img src="/img/frontendmentor-icon.svg" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#" class="linkedin"
+                    ><img src="/img/LinkedIn-icon.svg" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#" class="twitter"
+                    ><img src="/img/twitter-icon.svg" alt=""
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <div class="image">
+              <picture>
+                <source media="(min-width: 1024px)" srcset="/img/adam-3.png" />
+                <source
+                  media="(min-width: 768px) and (max-width: 1023px)"
+                  srcset="/img/adam-2.png"
+                />
+                <source media="(max-width: 767px)" srcset="/img/adam-1.png" />
+                <img
+                  src="/img/adam-1.png"
+                  alt="Adam Keyes - Front-end Developer"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div class="heroContainer container">
+          <div class="hero__content">
+            <p class="name">adamkeyes</p>
+            <h1>
+              <span class="greeting">Nice to meet you!</span>
+              <span class="name-intro"
+                >I'm <span class="highlighted-name">Adam Keyes</span>.</span
+              >
+            </h1>
+            <p>
+              Based in the UK, I'm a front-end developer passionate about
+              building accessible web apps that users love.
+            </p>
+            <a href="#" class="button">
+              <span class="button-text">CONTACT ME</span>
+            </a>
+          </div>
+
+          <!-- desktop -->
+          <div class="hero__desktop-image">
+            <div class="hero__top-background">
+              <div class="media">
+                <ul>
+                  <li>
+                    <a href="#" class="github"
+                      ><img src="/img/github-icon.svg" alt=""
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#" class="frontendmentor"
+                      ><img src="/img/frontendmentor-icon.svg" alt=""
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#" class="linkedin"
+                      ><img src="/img/LinkedIn-icon.svg" alt=""
+                    /></a>
+                  </li>
+                  <li>
+                    <a href="#" class="twitter"
+                      ><img src="/img/twitter-icon.svg" alt=""
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="image">
+                <picture>
+                  <img
+                    src="/img/adam-3.png"
+                    alt="Adam Keyes - Front-end Developer"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="mainContainer container">
+        <section class="experience">
+          <div class="experience__items">
+            <div class="items">
+              <div class="item">
+                <h2>HTML</h2>
+                <p class="item__description">4 Years Experience</p>
+              </div>
+              <div class="item">
+                <h2>CSS</h2>
+                <p class="item__description">4 Years Experience</p>
+              </div>
+              <div class="item">
+                <h2>Javascript</h2>
+                <p class="item__description">4 Years Experience</p>
+              </div>
+              <div class="item">
+                <h2>Accessibility</h2>
+                <p class="item__description">4 Years Experience</p>
+              </div>
+              <div class="item">
+                <h2>React</h2>
+                <p class="item__description">3 Years Experience</p>
+              </div>
+              <div class="item">
+                <h2>Sass</h2>
+                <p class="item__description">3 Years Experience</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="projects">
+          <div class="projects__items">
+            <div class="projects__items__container">
+              <div class="items__header">
+                <h2>Projects</h2>
+                <a href="#" class="contact button">
+                  <span class="button-text">CONTACT ME</span>
+                </a>
+              </div>
+              <article class="item">
+                <picture>
+                  <source
+                    media="(min-width: 1024px)"
+                    srcset="/img/project1-desktop.png"
+                  />
+                  <source
+                    media="(max-width: 1023px)"
+                    srcset="/img/project1.png"
+                  />
+                  <img src="/img/project1.png" alt="Design Portfolio" />
+                </picture>
+                <div class="item__overlay">
+                  <a href="#" class="item__link">
+                    <span class="button-text">VIEW PROJECT</span>
+                  </a>
+                  <a href="#" class="item__link">
+                    <span class="button-text">VIEW CODE</span>
+                  </a>
+                </div>
+                <h2 class="item__title">DESIGN PORTFOLIO</h2>
+                <ul class="technologies">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                </ul>
+                <a href="#" class="item__link">
+                  <span class="button-text">VIEW PROYECT</span>
+                </a>
+                <a href="#" class="item__link"
+                  ><span class="button-text">VIEW CODE</span>
+                </a>
+              </article>
+              <article class="item">
+                <picture>
+                  <source
+                    media="(min-width: 1024px)"
+                    srcset="/img/project2-desktop.png"
+                  />
+                  <source
+                    media="(max-width: 1023px)"
+                    srcset="/img/project2.png"
+                  />
+                  <img src="/img/project2.png" alt="E-Learning Landing Page" />
+                </picture>
+                <div class="item__overlay">
+                  <a href="#" class="item__link">
+                    <span class="button-text">VIEW PROJECT</span>
+                  </a>
+                  <a href="#" class="item__link">
+                    <span class="button-text">VIEW CODE</span>
+                  </a>
+                </div>
+                <h2 class="item__title">E-LEARNING LANDING PAGE</h2>
+                <ul class="technologies">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                </ul>
+
+                <a href="#" class="item__link">
+                  <span class="button-text">VIEW PROYECT</span>
+                </a>
+                <a href="#" class="item__link"
+                  ><span class="button-text">VIEW CODE</span></a
+                >
+              </article>
+              <article class="item">
+                <picture>
+                  <source
+                    media="(min-width: 1024px)"
+                    srcset="/img/project3-desktop.png"
+                  />
+                  <source
+                    media="(max-width: 1023px)"
+                    srcset="/img/project3.png"
+                  />
+                  <img src="/img/project3.png" alt="Todo Web App" />
+                </picture>
+                <div class="item__overlay">
+                  <a href="#" class="item__link">
+                    <span class="button-text">VIEW PROJECT</span>
+                  </a>
+                  <a href="#" class="item__link">
+                    <span class="button-text">VIEW CODE</span>
+                  </a>
+                </div>
+                <h2 class="item__title">TODO WEB APP</h2>
+                <ul class="technologies">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JAVASCRIPT</li>
+                </ul>
+                <a href="#" class="item__link"
+                  ><span class="button-text">VIEW PROYECT</span></a
+                >
+                <a href="#" class="item__link"
+                  ><span class="button-text">VIEW CODE</span></a
+                >
+              </article>
+              <article class="item">
+                <picture>
+                  <source
+                    media="(min-width: 1024px)"
+                    srcset="/img/project4-desktop.png"
+                  />
+                  <source
+                    media="(max-width: 1023px)"
+                    srcset="/img/project4.png"
+                  />
+                  <img src="/img/project4.png" alt="Entertainment Web App" />
+                </picture>
+                <div class="item__overlay">
+                  <a href="#" class="item__link">
+                    <span class="button-text">VIEW PROJECT</span>
+                  </a>
+                  <a href="#" class="item__link">
+                    <span class="button-text">VIEW CODE</span>
+                  </a>
+                </div>
+                <h2 class="item__title">ENTERTAINMENT WEB APP</h2>
+                <ul class="technologies">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JAVASCRIPT</li>
+                </ul>
+                <a href="#" class="item__link"
+                  ><span class="button-text">VIEW PROYECT</span></a
+                >
+                <a href="#" class="item__link"
+                  ><span class="button-text">VIEW CODE</span></a
+                >
+              </article>
+              <article class="item">
+                <picture>
+                  <source
+                    media="(min-width: 1024px)"
+                    srcset="/img/project5-desktop.png"
+                  />
+                  <source
+                    media="(max-width: 1023px)"
+                    srcset="/img/project5.png"
+                  />
+                  <img src="/img/project5.png" alt="Memory Game" />
+                </picture>
+                <div class="item__overlay">
+                  <a href="#" class="item__link">
+                    <span class="button-text">VIEW PROJECT</span>
+                  </a>
+                  <a href="#" class="item__link">
+                    <span class="button-text">VIEW CODE</span>
+                  </a>
+                </div>
+                <h2 class="item__title">MEMORY GAME</h2>
+                <ul class="technologies">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JAVASCRIPT</li>
+                </ul>
+                <a href="#" class="item__link"
+                  ><span class="button-text">VIEW PROYECT</span></a
+                >
+                <a href="#" class="item__link"
+                  ><span class="button-text">VIEW CODE</span></a
+                >
+              </article>
+              <article class="item">
+                <picture>
+                  <source
+                    media="(min-width: 1024px)"
+                    srcset="/img/project6-desktop.png"
+                  />
+                  <source
+                    media="(max-width: 1023px)"
+                    srcset="/img/project6.png"
+                  />
+                  <img src="/img/project6.png" alt="Art Gallery Showcase" />
+                </picture>
+                <div class="item__overlay">
+                  <a href="#" class="item__link">
+                    <span class="button-text">VIEW PROJECT</span>
+                  </a>
+                  <a href="#" class="item__link">
+                    <span class="button-text">VIEW CODE</span>
+                  </a>
+                </div>
+                <h2 class="item__title">ART GALLERY SHOWCASE</h2>
+                <ul class="technologies">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JAVASCRIPT</li>
+                </ul>
+                <a href="#" class="item__link"
+                  ><span class="button-text">VIEW PROYECT</span></a
+                >
+                <a href="#" class="item__link"
+                  ><span class="button-text">VIEW CODE</span></a
+                >
+              </article>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer id="footer">
+        <div class="footerContainer">
+          <div class="footer__header">
+            <h2>Contact</h2>
+            <p>
+              I would love to hear about your project and how I could help.
+              Please fill in the form, and I'll get back to you as soon as
+              possible.
+            </p>
+          </div>
+          <div class="footer__form">
+            <form action="" class="form">
+              <div class="form__group">
+                <input type="text" id="name" placeholder="NAME" />
+                <img src="/img/error.svg" alt="Error" class="error-icon" />
+                <span class="error-message">Sorry, invalid format here</span>
+                <label for="name"></label>
+              </div>
+              <div class="form__group">
+                <input type="email" id="email" placeholder="EMAIL" />
+                <img src="/img/error.svg" alt="Error" class="error-icon" />
+                <span class="error-message">Sorry, invalid format here</span>
+                <label for="email"></label>
+              </div>
+              <div class="form__group">
+                <textarea
+                  class="form-textarea"
+                  id="message"
+                  placeholder="MESSAGE"
+                ></textarea>
+                <img src="/img/error.svg" alt="Error" class="error-icon" />
+                <span class="error-message">Sorry, can't be empty</span>
+                <label for="message"></label>
+              </div>
+              <a href="#" class="form__submit">
+                <span class="button-text">SEND MESSAGE</span>
+              </a>
+            </form>
+          </div>
+          <div class="footer__bottom">
+            <div class="name">
+              <h2>adamkeyes</h2>
+            </div>
+            <div class="media">
+              <ul>
+                <li>
+                  <a href="#" class="github"
+                    ><img src="/img/github-icon.svg" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#" class="frontendmentor"
+                    ><img src="/img/frontendmentor-icon.svg" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#" class="linkedin"
+                    ><img src="/img/LinkedIn-icon.svg" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#" class="twitter"
+                    ><img src="/img/twitter-icon.svg" alt=""
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__container__tablet">
+          <div class="footer__bottom">
+            <div class="name">
+              <h2>adamkeyes</h2>
+            </div>
+            <div class="media">
+              <ul>
+                <li>
+                  <a href="#" class="github"
+                    ><img src="/img/github-icon.svg" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#" class="frontendmentor"
+                    ><img src="/img/frontendmentor-icon.svg" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#" class="linkedin"
+                    ><img src="/img/LinkedIn-icon.svg" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#" class="twitter"
+                    ><img src="/img/twitter-icon.svg" alt=""
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+    <script src="/src/validation.js"></script>
+  </body>
+</html>
