@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/Frozmiz/ConquerBlocks-CSS-P4-Portfolio/settings/pages",
+  "homepage": "https://github.com/Frozmiz/Microsite-sitios-guapos/settings/pages",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
