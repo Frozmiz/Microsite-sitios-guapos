@@ -102,11 +102,41 @@ header {
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
     transition: left 0.3s ease;
     z-index: 1000;
-    padding: 2rem 0;
+    padding: 0;
+    overflow-y: auto;
 
     // Animación inicial
     opacity: 0;
     transform: translateX(-100%);
+
+    // Logo dentro del menú lateral
+    .nav-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 1rem 1.5rem;
+      border-bottom: 2px solid #f3f4f6;
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      
+      img {
+        height: 60px;
+        width: auto;
+        // Logo en color verde
+        filter: brightness(0) saturate(100%) invert(44%) sepia(86%) saturate(423%)
+          hue-rotate(88deg) brightness(95%) contrast(94%);
+        transition: all 0.3s ease;
+        
+        // Animación de entrada
+        opacity: 0;
+        transform: scale(0.8);
+        
+        &:hover {
+          filter: brightness(0) saturate(100%) invert(31%) sepia(93%)
+            saturate(440%) hue-rotate(88deg) brightness(89%) contrast(91%);
+          transform: scale(1.05);
+        }
+      }
+    }
 
     ul {
       display: flex;
@@ -114,7 +144,7 @@ header {
       list-style: none;
       gap: 0;
       margin: 0;
-      padding: 0;
+      padding: 1rem 0 2rem 0;
 
       li {
         font-weight: 500;
@@ -124,13 +154,17 @@ header {
         transition: all 0.3s ease;
 
         &:first-child {
-          border-top: 1px solid #f3f4f6;
+          border-top: none; // Ya no necesitamos borde superior
+        }
+
+        &:last-child {
+          border-bottom: none;
         }
 
         // Animación escalonada para cada elemento
         @for $i from 1 through 10 {
           &:nth-child(#{$i}) {
-            animation-delay: #{$i * 0.1}s;
+            animation-delay: #{($i + 1) * 0.1}s; // +1 para dar tiempo al logo
           }
         }
 
@@ -172,6 +206,13 @@ header {
     opacity: 1;
     transform: translateX(0);
     animation: slideInLeft 0.3s ease-out;
+
+    // Anima
+    .nav-logo img {
+      opacity: 1;
+      transform: scale(1);
+      animation: bounceIn 0.6s ease-out 0.2s both;
+    }
 
     ul li {
       opacity: 1;
@@ -224,10 +265,17 @@ header {
       transform: none; // Sin transformación en desktop
       transition: none;
       animation: none; // Sin animación en desktop
+      overflow: visible;
+
+      // Ocultar logo del menú en desktop
+      .nav-logo {
+        display: none;
+      }
 
       ul {
         flex-direction: row;
         gap: 2rem;
+        padding: 0; // Sin padding en desktop
 
         li {
           border: none;
@@ -237,6 +285,10 @@ header {
           transition: color 0.2s ease; // Solo transición de color
 
           &:first-child {
+            border: none;
+          }
+
+          &:last-child {
             border: none;
           }
 
