@@ -23,122 +23,128 @@
 
   <body>
     <header>
-      <div class="logo">
-        <img
-          width="500px"
-          src="./public/img/logo.svg"
-          alt="Logo de SitiosGuapos"
-        />
-      </div>
-
-      <!-- Checkbox oculto para controlar el menú -->
-      <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" />
-
-      <!-- Label que actúa como botón hamburguesa -->
-      <label for="menu-toggle" class="menu-toggle-label">
-        <span class="hamburger"></span>
-      </label>
-
-      <nav class="nav-menu">
-        <!-- Logo dentro del menú lateral -->
-        <div class="nav-logo">
-          <img src="./public/img/logo.svg" alt="Logo de SitiosGuapos" />
+      <div class="container">
+        <div class="logo">
+          <img
+            width="500px"
+            src="./public/img/logo.svg"
+            alt="Logo de SitiosGuapos"
+          />
         </div>
-        
-        <ul>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="quienes-somos.html">Quiénes somos</a></li>
-          <li><a href="destinos.html">Destinos</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="registro.html">Registro</a></li>
-          <li><a href="login.html">Login</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
 
-      <!-- Overlay para cerrar el menú -->
-      <div class="menu-overlay"></div>
+        <!-- Checkbox oculto para controlar el menú -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" />
+
+        <!-- Label que actúa como botón hamburguesa -->
+        <label for="menu-toggle" class="menu-toggle-label">
+          <span class="hamburger"></span>
+        </label>
+
+        <nav class="nav-menu">
+          <!-- Logo dentro del menú lateral -->
+          <div class="nav-logo">
+            <img src="./public/img/logo.svg" alt="Logo de SitiosGuapos" />
+          </div>
+
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="quienes-somos.html">Quiénes somos</a></li>
+            <li><a href="destinos.html">Destinos</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="registro.html">Registro</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <!-- Overlay para cerrar el menú -->
+        <div class="menu-overlay"></div>
+      </div>
     </header>
 
     <main>
-      <section>
-        <h1>Bienvenido a Sitios Guapos</h1>
-        <img
-          src="img/home/home1.jpg"
-          alt="Nómada digital en la naturaleza"
-          class="responsive"
-        />
-        <p>
-          Descubre la vida nómada digital conectada con la naturaleza en zonas
-          rurales. Slowork es tu comunidad para encontrar alojamiento,
-          coworkings y cursos de formación en el estilo de vida slow.
-        </p>
-      </section>
-
-      <section>
-        <h2>¿Quiénes somos?</h2>
-        <p>
-          Un equipo de apasionados por la vida slow, la innovación rural y el
-          trabajo remoto. <a href="quienes-somos.html">Conócenos →</a>
-        </p>
-      </section>
-
-      <section>
-        <h2>Últimos cursos</h2>
-        <article>
-          <h3>Marketing Digital para Nómadas</h3>
-          <p>Aprende a posicionar tu marca personal mientras viajas.</p>
-          <a href="cursos/curso-marca-personal.html">Ver curso →</a>
-        </article>
-        <article>
-          <h3>Productividad en Zonas Rurales</h3>
-          <p>Estrategias para mantenerte enfocado en entornos naturales.</p>
-          <a href="cursos/curso-productividad-zonas-rurales.html"
-            >Ver curso →</a
-          >
-        </article>
-        <p>
-          Accede a todos los cursos
-          <a href="cursos.html">aquí →</a>
-        </p>
-      </section>
-
-      <section>
-        <h2>Últimas noticias</h2>
-        <article>
-          <h3>
-            Los mejores destinos para nómadas digitales en 2025 ¡con
-            calificaciones de Wi-Fi!
-          </h3>
+      <div class="container">
+        <section class="hero__section">
+          <h1>Bienvenido a Sitios Guapos</h1>
+          <img
+            src="img/home/home1.jpg"
+            alt="Nómada digital en la naturaleza"
+            class="responsive"
+          />
           <p>
-            A medida que el mundo continúa adoptando el trabajo remoto, elegir
-            la ciudad correcta como nómada digital es más crítico que nunca.
+            Descubre la vida nómada digital conectada con la naturaleza en zonas
+            rurales. Slowork es tu comunidad para encontrar alojamiento,
+            coworkings y cursos de formación en el estilo de vida slow.
           </p>
-          <a href="blog/mejores-destinos-nomadas.html">Ver noticia →</a>
-        </article>
-        <article>
-          <h3>
-            Cómo establecer contactos como nómada digital y encontrar
-            oportunidades de trabajo a distancia
-          </h3>
+        </section>
+
+        <section>
+          <h2>¿Quiénes somos?</h2>
           <p>
-            Construir una carrera exitosa mientras viaja requiere más que solo
-            asegurar un trabajo remoto
+            Un equipo de apasionados por la vida slow, la innovación rural y el
+            trabajo remoto. <a href="quienes-somos.html">Conócenos →</a>
           </p>
-          <p>
-            <a href="blog/establecer-contactos-encontrar-oportunidades.html"
-              >Ver noticia →</a
+        </section>
+
+        <section>
+          <h2>Últimos cursos</h2>
+          <article>
+            <h3>Marketing Digital para Nómadas</h3>
+            <p>Aprende a posicionar tu marca personal mientras viajas.</p>
+            <a href="cursos/curso-marca-personal.html">Ver curso →</a>
+          </article>
+          <article>
+            <h3>Productividad en Zonas Rurales</h3>
+            <p>Estrategias para mantenerte enfocado en entornos naturales.</p>
+            <a href="cursos/curso-productividad-zonas-rurales.html"
+              >Ver curso →</a
             >
+          </article>
+          <p>
+            Accede a todos los cursos
+            <a href="cursos.html">aquí →</a>
           </p>
-        </article>
+        </section>
 
-        <a href="blog.html">Ver todas las noticias →</a>
-      </section>
+        <section>
+          <h2>Últimas noticias</h2>
+          <article>
+            <h3>
+              Los mejores destinos para nómadas digitales en 2025 ¡con
+              calificaciones de Wi-Fi!
+            </h3>
+            <p>
+              A medida que el mundo continúa adoptando el trabajo remoto, elegir
+              la ciudad correcta como nómada digital es más crítico que nunca.
+            </p>
+            <a href="blog/mejores-destinos-nomadas.html">Ver noticia →</a>
+          </article>
+          <article>
+            <h3>
+              Cómo establecer contactos como nómada digital y encontrar
+              oportunidades de trabajo a distancia
+            </h3>
+            <p>
+              Construir una carrera exitosa mientras viaja requiere más que solo
+              asegurar un trabajo remoto
+            </p>
+            <p>
+              <a href="blog/establecer-contactos-encontrar-oportunidades.html"
+                >Ver noticia →</a
+              >
+            </p>
+          </article>
+
+          <a href="blog.html">Ver todas las noticias →</a>
+        </section>
+      </div>
     </main>
 
     <footer>
-      <p>© 2025 Slowork | Todos los derechos reservados</p>
-      <a href="aviso-legal.html">Aviso Legal</a>
+      <div class="container">
+        <p>© 2025 Slowork | Todos los derechos reservados</p>
+        <a href="aviso-legal.html">Aviso Legal</a>
+      </div>
     </footer>
 
     <script type="module" src="/src/main.js"></script>

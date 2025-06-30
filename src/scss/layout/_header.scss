@@ -3,12 +3,16 @@
 
 header {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 
   .logo {
     img {
@@ -117,19 +121,19 @@ header {
       padding: 2rem 1rem 1.5rem;
       border-bottom: 2px solid #f3f4f6;
       background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-      
+
       img {
         height: 60px;
         width: auto;
         // Logo en color verde
-        filter: brightness(0) saturate(100%) invert(44%) sepia(86%) saturate(423%)
-          hue-rotate(88deg) brightness(95%) contrast(94%);
+        filter: brightness(0) saturate(100%) invert(44%) sepia(86%)
+          saturate(423%) hue-rotate(88deg) brightness(95%) contrast(94%);
         transition: all 0.3s ease;
-        
+
         // Animación de entrada
         opacity: 0;
         transform: scale(0.8);
-        
+
         &:hover {
           filter: brightness(0) saturate(100%) invert(31%) sepia(93%)
             saturate(440%) hue-rotate(88deg) brightness(89%) contrast(91%);
@@ -242,7 +246,10 @@ header {
 
   // Versión desktop (tablet y arriba)
   @media (min-width: 768px) {
-    padding: 1rem 2rem;
+    .container {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
 
     .logo img {
       height: 80px; // Más grande en desktop
@@ -275,7 +282,7 @@ header {
       ul {
         flex-direction: row;
         gap: 2rem;
-        padding: 0; // Sin padding en desktop
+        padding: 0;
 
         li {
           border: none;
