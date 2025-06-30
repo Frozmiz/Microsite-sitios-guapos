@@ -3,16 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
     <meta
       name="description"
-      content="Sitios Guapos - Comunidad para viajeros que buscan lugares con alma y brillo por Andalucia y España"
+      content="Sitios Guapos - Comunidad para viajeros que buscan lugares con alma y brillo por Andalucia y España general"
     />
     <title>Sitios Guapos | Inicio</title>
-    <link rel="stylesheet" href="css/estilo.css" />
 
-    <link rel="icon" href="/ConquerBlocks-CSS-P4-Portfolio/assets/favicon-CRpsZgQe.ico" sizes="any" />
+    <link rel="icon" href="/ConquerBlocks-CSS-P4-Portfolio/assets/favicon-D0vukfcW.ico" sizes="any" />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <script type="module" crossorigin src="/ConquerBlocks-CSS-P4-Portfolio/assets/index-DCAhico6.js"></script>
+    <link rel="stylesheet" crossorigin href="/ConquerBlocks-CSS-P4-Portfolio/assets/index-Qr8ecQfN.css">
   </head>
 
   <body>
@@ -20,13 +27,22 @@
       <div class="logo">
         <img
           width="500px"
-          src="img/common/logotipo.png"
-          alt="Logo de Slowork"
+          src="/ConquerBlocks-CSS-P4-Portfolio/assets/logo-rIM3rS1f.svg"
+          alt="Logo de SitiosGuapos"
         />
       </div>
-      <nav>
+
+      <!-- Checkbox oculto para controlar el menú -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" />
+
+      <!-- Label que actúa como botón hamburguesa -->
+      <label for="menu-toggle" class="menu-toggle-label">
+        <span class="hamburger"></span>
+      </label>
+
+      <nav class="nav-menu">
         <ul>
-          <li>Inicio</li>
+          <li><a href="#inicio">Inicio</a></li>
           <li><a href="quienes-somos.html">Quiénes somos</a></li>
           <li><a href="destinos.html">Destinos</a></li>
           <li><a href="blog.html">Blog</a></li>
@@ -35,6 +51,9 @@
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </nav>
+
+      <!-- Overlay para cerrar el menú -->
+      <div class="menu-overlay"></div>
     </header>
 
     <main>
@@ -117,5 +136,7 @@
       <p>© 2025 Slowork | Todos los derechos reservados</p>
       <a href="aviso-legal.html">Aviso Legal</a>
     </footer>
+
+    <script src="/src/validation.js"></script>
   </body>
 </html>
