@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "/ConquerBlocks-CSS-P4-Portfolio/",
+  base: "/Microsite-sitios-guapos/",
   build: {
     rollupOptions: {
       input: [
