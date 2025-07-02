@@ -25,6 +25,16 @@
     transform: translateY(5px) rotate(-1deg);
   }
 }
+// Animación de rebote en círculo para sección About
+@keyframes bounceCircle {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
 
 @keyframes slideOutLeft {
   from {

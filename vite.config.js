@@ -8,10 +8,10 @@ export default defineConfig({
         "index.html",
         "quienes-somos.html",
         "destinos.html",
-        "blog",
-        "registro",
-        "login",
-        "contacto"
+        "blog.html",
+        "registro.html",
+        "login.html",
+        "contacto.html"
 
       ],
     },
