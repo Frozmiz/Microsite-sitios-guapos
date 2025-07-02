@@ -3,8 +3,7 @@
 
 header {
   position: relative;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
 
   .container {
     display: flex;
@@ -16,16 +15,16 @@ header {
 
   .logo {
     img {
-      height: 50px;
+      height: 65px;
       width: auto;
 
-      filter: brightness(0) saturate(100%) invert(44%) sepia(86%) saturate(423%)
-        hue-rotate(88deg) brightness(95%) contrast(94%);
+      filter: brightness(0) saturate(100%) invert(66%) sepia(21%) saturate(279%)
+        hue-rotate(90deg) brightness(95%) contrast(90%);
       transition: filter 0.3s ease;
 
       &:hover {
-        filter: brightness(0) saturate(100%) invert(31%) sepia(93%)
-          saturate(440%) hue-rotate(88deg) brightness(89%) contrast(91%);
+        filter: brightness(0) saturate(100%) invert(60%) sepia(30%)
+          saturate(300%) hue-rotate(90deg) brightness(85%) contrast(90%);
         animation: pulseGreen 0.6s ease-in-out;
       }
     }
@@ -47,7 +46,7 @@ header {
       display: block;
       width: 25px;
       height: 3px;
-      background-color: #374151;
+      background-color: white;
       position: relative;
       transition: all 0.3s ease;
 
@@ -57,7 +56,7 @@ header {
         position: absolute;
         width: 25px;
         height: 3px;
-        background-color: #374151;
+        background-color: white;
         transition: all 0.3s ease;
       }
 
@@ -71,11 +70,11 @@ header {
     }
 
     &:hover .hamburger {
-      background-color: #248a46;
+      background-color: $yellow;
 
       &::before,
       &::after {
-        background-color: #248a46;
+        background-color: $yellow;
       }
     }
   }
@@ -102,7 +101,7 @@ header {
     left: -100%; // Oculto por defecto
     width: 280px;
     height: 100vh;
-    background-color: #fff;
+    background-color: rgba($green-blue, 0.8);
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
     transition: left 0.3s ease;
     z-index: 1000;
@@ -120,24 +119,24 @@ header {
       align-items: center;
       padding: 2rem 1rem 1.5rem;
       border-bottom: 2px solid #f3f4f6;
-      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      background-color: rgba($black-blue, 0.8);
 
       img {
-        height: 60px;
+        height: 80px;
         width: auto;
-        // Logo en color verde
-        filter: brightness(0) saturate(100%) invert(44%) sepia(86%)
-          saturate(423%) hue-rotate(88deg) brightness(95%) contrast(94%);
-        transition: all 0.3s ease;
+
+        filter: brightness(0) saturate(100%) invert(66%) sepia(21%)
+          saturate(279%) hue-rotate(90deg) brightness(95%) contrast(90%);
+        transition: filter 0.3s ease;
 
         // Animación de entrada
         opacity: 0;
         transform: scale(0.8);
 
         &:hover {
-          filter: brightness(0) saturate(100%) invert(31%) sepia(93%)
-            saturate(440%) hue-rotate(88deg) brightness(89%) contrast(91%);
-          transform: scale(1.05);
+          filter: brightness(0) saturate(100%) invert(60%) sepia(30%)
+            saturate(300%) hue-rotate(90deg) brightness(85%) contrast(90%);
+          animation: pulseGreen 0.6s ease-in-out;
         }
       }
     }
@@ -176,11 +175,11 @@ header {
           display: block;
           padding: 1rem 2rem;
           text-decoration: none;
-          color: #374151;
+          color: white;
           transition: all 0.2s ease;
 
           &:hover {
-            color: #248a46;
+            color: $yellow;
             background-color: #f9fafb;
             transform: translateX(5px);
           }

@@ -1,2 +1,26 @@
 @use "../abstracts/_variables" as *;
 @use "../abstracts/_mixins" as *;
+
+// Botón único: estilo secundario centralizado
+.btn {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  min-width: 180px;
+
+  background: transparent;
+  color: $black-blue;
+  border: 2px solid $green-blue;
+
+  &:hover {
+    background: $green-blue;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(22, 163, 74, 0.2);
+  }
+}

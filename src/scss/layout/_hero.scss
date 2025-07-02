@@ -3,47 +3,21 @@
 
 .hero__section {
   // Background con gradiente y patrón geométrico
-  background: radial-gradient(
-      circle at 25% 25%,
-      rgba(22, 163, 74, 0.1) 0%,
-      transparent 50%
-    ),
-    radial-gradient(
-      circle at 75% 75%,
-      rgba(21, 128, 61, 0.08) 0%,
-      transparent 50%
-    ),
-    linear-gradient(135deg, #f8fafc 0%, #e2e8f0 40%, #f1f5f9 100%);
-
-  // Patrón decorativo opcional
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: radial-gradient(
-      circle at 1px 1px,
-      rgba(22, 163, 74, 0.05) 1px,
-      transparent 0
-    );
-    background-size: 40px 40px;
-    pointer-events: none;
-  }
+  background-color: rgba(#a3bbb8, 0.7);
 
   position: relative;
-
+  margin-top: 3rem;
   margin-bottom: 3rem;
   padding: 3rem 0;
   min-height: 70vh;
   display: flex;
   align-items: center;
   overflow: hidden;
+  border-radius: 2%;
 
   .container {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 3\sfr;
     gap: 2rem;
     align-items: center;
     position: relative;
@@ -73,7 +47,7 @@
 
   .hero__subtitle {
     font-size: 1.125rem;
-    color: #6b7280;
+    color: #1f2937;
     margin-bottom: 2rem;
     line-height: 1.6;
     max-width: 600px;
@@ -109,7 +83,7 @@
       left: -10px;
       right: 10px;
       bottom: 10px;
-      background: linear-gradient(135deg, #16a34a, #15803d);
+      background: $green-blue;
       border-radius: 20px;
       z-index: -1;
     }
@@ -157,84 +131,6 @@
     .hero__subtitle {
       margin-left: 0;
       margin-right: 0;
-    }
-  }
-}
-
-// Estilos para botones
-.btn {
-  display: inline-block;
-  padding: 0.875rem 2rem;
-  border-radius: 50px;
-  font-weight: 600;
-  text-decoration: none;
-  text-align: center;
-  transition: all 0.3s ease;
-  font-size: 1rem;
-  min-width: 180px;
-
-  &--primary {
-    background: linear-gradient(135deg, #16a34a, #15803d);
-    color: white;
-
-    &:hover {
-      background: linear-gradient(135deg, #15803d, #166534);
-      transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(22, 163, 74, 0.3);
-    }
-  }
-
-  &--secondary {
-    background: transparent;
-    color: #16a34a;
-    border: 2px solid #16a34a;
-
-    &:hover {
-      background: #16a34a;
-      color: white;
-      transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(22, 163, 74, 0.2);
-    }
-  }
-}
-
-// Animación para elementos flotantes
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  33% {
-    transform: translateY(-10px) rotate(1deg);
-  }
-  66% {
-    transform: translateY(5px) rotate(-1deg);
-  }
-}
-
-// Elementos decorativos adicionales en desktop
-@include breakpoint(desktop) {
-  .hero__section {
-    &::before {
-      background-size: 60px 60px;
-    }
-
-    // Segundo elemento flotante
-    .hero__content::before {
-      content: "";
-      position: absolute;
-      top: -20%;
-      left: -10%;
-      width: 80px;
-      height: 80px;
-      background: linear-gradient(
-        135deg,
-        rgba(22, 163, 74, 0.08),
-        rgba(21, 128, 61, 0.03)
-      );
-      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-      animation: float 8s ease-in-out infinite reverse;
-      z-index: -1;
     }
   }
 }

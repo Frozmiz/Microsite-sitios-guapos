@@ -8,8 +8,8 @@
 // used throughout the application for visual enhancement
 
 // Main background
-main {
-  background-image: url("/public/img/background.jpg");
+body {
+  background-image: url("/img/background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

@@ -6,6 +6,12 @@ export default defineConfig({
     rollupOptions: {
       input: [
         "index.html",
+        "quienes-somos.html",
+        "destinos.html",
+        "blog",
+        "registro",
+        "login",
+        "contacto"
 
       ],
     },
