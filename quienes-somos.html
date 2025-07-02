@@ -5,72 +5,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Conoce al equipo de Slowork, apasionados por el trabajo remoto y la vida rural."
+      content="Descubre al equipo de Sitios Guapos: creadores de rutas únicas y experiencia viajera auténtica."
     />
-    <title>Quiénes somos | Slowork</title>
-    <link rel="stylesheet" href="css/estilo.css" />
+    <title>Quiénes somos | Sitios Guapos</title>
 
     <link rel="icon" href="/Microsite-sitios-guapos/assets/favicon-D0vukfcW.ico" sizes="any" />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="stylesheet" crossorigin href="/Microsite-sitios-guapos/assets/main-DHPsk3Wj.css">
   </head>
   <body>
     <header>
-      <div class="logo">
-        <img
-          width="500px"
-          src="img/common/logotipo.png"
-          alt="Logo de Slowork"
-        />
+      <div class="container">
+        <div class="logo">
+          <img width="500px" src="/Microsite-sitios-guapos/img/logo.svg" alt="Logo de SitiosGuapos" />
+        </div>
+
+        <!-- Checkbox oculto para controlar el menú -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" />
+
+        <!-- Label que actúa como botón hamburguesa -->
+        <label for="menu-toggle" class="menu-toggle-label">
+          <span class="hamburger"></span>
+        </label>
+
+        <nav class="nav-menu">
+          <!-- Logo dentro del menú lateral -->
+          <div class="nav-logo">
+            <img src="/Microsite-sitios-guapos/img/logo.svg" alt="Logo de SitiosGuapos" />
+          </div>
+
+          <ul>
+            <li><a href="inicio">Inicio</a></li>
+            <li><a href="#quienes-somos.html">Quiénes somos</a></li>
+            <li><a href="destinos.html">Destinos</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="registro.html">Registro</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <!-- Overlay para cerrar el menú -->
+        <div class="menu-overlay"></div>
       </div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li>Quiénes somos</li>
-          <li><a href="destinos.html">Destinos</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="registro.html">Registro</a></li>
-          <li><a href="login.html">Login</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
     </header>
 
     <main>
-      <section>
-        <article>
-          <h1>Nuestro equipo</h1>
-          <p>
-            En Slowork creemos en la conexión entre personas, tecnología y
-            naturaleza. Somos un equipo de nómadas digitales, diseñadores,
-            desarrolladores y soñadores que decidieron llevar la oficina al
-            campo.
-          </p>
-        </article>
+      <section class="about__section">
+        <div class="container">
+          <div class="about__content">
+            <h2 class="about__title">Nuestra visión</h2>
+            <p class="about__subtitle">
+              En Sitios Guapos conectamos viajeros con destinos inolvidables.
+              Nuestro equipo diseña rutas, comparte guías y crea comunidad para
+              que cada viaje sea auténtico y lleno de magia.
+            </p>
+          </div>
+          <div class="about__image">
+            <img
+              src="/Microsite-sitios-guapos/img/vision.png"
+              alt="Viajeros explorando"
+              class="hero__img"
+            />
+          </div>
+        </div>
       </section>
 
-      <section>
-        <h2>Miembros del equipo</h2>
-        <article>
-          <figure>
-            <img
-              width="300px"
-              src="img/about/about1.jpg"
-              alt="Fundador de Slowork"
-            />
-            <figcaption>Fundadora de Slowork</figcaption>
-          </figure>
-
-          <h3>Rocio González</h3>
-          <p>
-            Fundadora y apasionada del mundo financiero y legal. Cree que el
-            futuro del trabajo es descentralizado y sostenible.
-          </p>
-        </article>
+      <section class="team__section">
+        <div class="container">
+          <h2 class="team__title">Nuestros fundadores</h2>
+          <div class="team__grid">
+            <article class="team__card">
+              <figure>
+                <img
+                  src="https://via.placeholder.com/150"
+                  alt="Miembro del equipo"
+                />
+                <figcaption>Fundador/a</figcaption>
+              </figure>
+              <p>
+                Co-fundador/a de Sitios Guapos, especializado/a en crear
+                experiencias memorables y conectar viajeros con destinos únicos.
+              </p>
+            </article>
+            <article class="team__card">
+              <figure>
+                <img
+                  src="https://via.placeholder.com/150"
+                  alt="Miembro del equipo"
+                />
+                <figcaption>Fundador/a</figcaption>
+              </figure>
+              <p>
+                Co-fundador/a de Sitios Guapos, comprometido/a con la innovación
+                tecnológica y la creación de rutas personalizadas para cada
+                aventura.
+              </p>
+            </article>
+          </div>
+          <a href="index.html" class="btn">Volver al inicio →</a>
+        </div>
       </section>
     </main>
     <footer>
-      <p>© 2025 Slowork | Todos los derechos reservados</p>
+      <p>© 2025 Sitios Guapos | Todos los derechos reservados</p>
       <a href="aviso-legal.html">Aviso Legal</a>
     </footer>
   </body>
