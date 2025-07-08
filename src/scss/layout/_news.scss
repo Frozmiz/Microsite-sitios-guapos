@@ -1,0 +1,237 @@
+@use "../abstracts/_variables" as *;
+@use "../abstracts/_mixins" as *;
+
+.news__section {
+  background-color: rgba(#a3bbb8, 0.7);
+  position: relative;
+  margin: 2rem 0;
+  padding: 2rem 0;
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 2%;
+
+  @include breakpoint(mobile) {
+    margin: 2.5rem 0;
+    padding: 2.5rem 0;
+  }
+  @include breakpoint(tablet) {
+    margin: 3rem 0;
+    padding: 3rem 0;
+    min-height: 50vh;
+  }
+  @include breakpoint(desktop) {
+    margin: 4rem 0;
+    padding: 4rem 0;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    @include breakpoint(desktop) {
+      gap: 3rem;
+    }
+  }
+
+  .news__content {
+    text-align: center;
+    order: 1;
+    h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: $black-blue;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+      @include breakpoint(mobile) {
+        font-size: 2rem;
+      }
+      @include breakpoint(tablet) {
+        font-size: 2.5rem;
+      }
+      @include breakpoint(desktop) {
+        font-size: 3rem;
+      }
+      @include breakpoint(desktopxl) {
+        font-size: 3.5rem;
+      }
+    }
+    .news__subtitle {
+      font-size: 1.125rem;
+      color: $black-blue;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      @include breakpoint(tablet) {
+        font-size: 1.25rem;
+      }
+      @include breakpoint(desktop) {
+        font-size: 1.375rem;
+      }
+    }
+  }
+
+  .news__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: 100%;
+    order: 2;
+    @include breakpoint(mobile) {
+      gap: 2rem;
+    }
+    @include breakpoint(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+    @include breakpoint(tabletHorizontal) {
+      gap: 2.5rem;
+    }
+    @include breakpoint(desktop) {
+      gap: 3rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    @include breakpoint(desktopxl) {
+      gap: 4rem;
+    }
+  }
+
+  .news__card {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 1rem;
+    border-radius: 15px;
+    text-align: left;
+    transition: all 0.3s ease;
+    position: relative;
+    width: 100%;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include breakpoint(mobile) {
+      padding: 1.25rem;
+    }
+    @include breakpoint(tablet) {
+      padding: 1.5rem;
+    }
+    @include breakpoint(desktop) {
+      padding: 2rem;
+    }
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+    }
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: $black-blue;
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+      @include breakpoint(mobile) {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      @include breakpoint(tablet) {
+        font-size: 1.75rem;
+      }
+      @include breakpoint(desktop) {
+        font-size: 2rem;
+      }
+    }
+    p {
+      font-size: 1rem;
+      color: $black-blue;
+      margin-bottom: 1.25rem;
+      line-height: 1.5;
+      flex: 1 1 auto;
+      @include breakpoint(tablet) {
+        font-size: 1.125rem;
+      }
+    }
+    .btn {
+      align-self: flex-start;
+      /* Elimina todos los estilos de botón propios, solo alineación */
+      /* El resto de estilos los hereda del global */
+    }
+  }
+
+  .news__actions {
+    text-align: center;
+    margin-top: 2rem;
+    .btn {
+      /* Solo alineación, sin sobrescribir estilos globales */
+    }
+  }
+}
+
+// Responsive para pantallas muy pequeñas
+@media (max-width: 350px) {
+  .news__section {
+    margin: 1.5rem 0;
+    padding: 1.5rem 0;
+    .news__content {
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+      }
+      .news__subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+    .news__grid {
+      gap: 1rem;
+    }
+    .news__card {
+      padding: 0.75rem;
+      h3 {
+        font-size: 1.125rem;
+        margin-bottom: 0.5rem;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+      .btn {
+        /* Solo alineación */
+      }
+    }
+    .news__actions {
+      .btn {
+        /* Solo alineación */
+      }
+    }
+  }
+}
+
+// Responsive para pantallas muy grandes
+@media (min-width: 1600px) {
+  .news__section {
+    .news__grid {
+      max-width: 1400px;
+    }
+    .news__card {
+      padding: 2.5rem;
+      h3 {
+        font-size: 2.25rem;
+      }
+      p {
+        font-size: 1.25rem;
+      }
+      .btn {
+        /* Solo alineación */
+      }
+    }
+    .news__actions {
+      .btn {
+        /* Solo alineación */
+      }
+    }
+  }
+}
