@@ -210,42 +210,9 @@
     }
 
     .btn {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      border-radius: 50px;
-      font-weight: 600;
-      text-decoration: none;
-      text-align: center;
-      transition: all 0.3s ease;
-      font-size: 0.875rem;
-      min-width: 140px;
-      background: $green;
-      color: $black-blue;
-      width: auto;
-
-      @include breakpoint(mobile) {
-        padding: 0.875rem 1.75rem;
-        font-size: 0.9rem;
-        min-width: 160px;
-      }
-
-      @include breakpoint(tablet) {
-        padding: 1rem 2rem;
-        font-size: 1rem;
-        min-width: 180px;
-      }
-
-      @include breakpoint(desktop) {
-        padding: 1.125rem 2.25rem;
-        font-size: 1.125rem;
-        min-width: 200px;
-      }
-
-      &:hover {
-        background: $green-blue;
-        color: white;
-        transform: translateY(-2px);
-      }
+      align-self: center;
+      /* Elimina todos los estilos de botón propios, solo alineación */
+      /* El resto de estilos los hereda del global */
     }
   }
 }
