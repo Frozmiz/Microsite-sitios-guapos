@@ -17,22 +17,43 @@
 
   <body>
     <header>
-      <div class="logo">
-        <a href="index.html">
-          <img width="500px" src="/img/logo.svg" alt="Logo de Sitios Guapos" />
-        </a>
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">
+            <img width="500px" src="/img/logo.svg" alt="Logo de SitiosGuapos" />
+          </a>
+        </div>
+
+        <!-- Checkbox oculto para controlar el menú -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" />
+
+        <!-- Label que actúa como botón hamburguesa -->
+        <label for="menu-toggle" class="menu-toggle-label">
+          <span class="hamburger"></span>
+        </label>
+
+        <nav class="nav-menu">
+          <!-- Logo dentro del menú lateral -->
+          <div class="nav-logo">
+            <a href="index.html">
+              <img src="/img/logo.svg" alt="Logo de SitiosGuapos" />
+            </a>
+          </div>
+
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="quienes-somos.html">Quiénes somos</a></li>
+            <li><a href="destinos.html">Destinos</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#registro.html">Registro</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <!-- Overlay para cerrar el menú -->
+        <div class="menu-overlay"></div>
       </div>
-      <nav>
-        <ul>
-          <li>Inicio</li>
-          <li><a href="quienes-somos.html">Quiénes somos</a></li>
-          <li><a href="destinos.html">Destinos</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li>Registro</li>
-          <li><a href="login.html">Login</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
     </header>
     <main>
       <h1>Registrate</h1>
