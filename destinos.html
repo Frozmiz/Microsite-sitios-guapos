@@ -1,69 +1,113 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="es">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Cursos</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <meta name="description" content="Cursos disponibles" />
-
-    <meta property="og:title" content="" />
-    <meta property="og:type" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:image:alt" content="" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Descubre los destinos más hermosos y únicos: desde rutas rurales hasta experiencias nómadas digitales."
+    />
+    <title>Destinos | Sitios Guapos</title>
 
     <link rel="icon" href="/Microsite-sitios-guapos/assets/favicon-D0vukfcW.ico" sizes="any" />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-
-    <link rel="manifest" href="site.webmanifest" />
-    <meta name="theme-color" content="#fafafa" />
+    <link rel="stylesheet" crossorigin href="/Microsite-sitios-guapos/assets/main-VQYRD9DT.css">
   </head>
 
   <body>
     <header>
-      <figure>
-        <img
-          width="150px"
-          src="/src/img/common/logotipo.png"
-          alt="Logotipo para el proyecto"
-        />
-      </figure>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="quienes-somos.html">Quienes somos</a></li>
-          <li>Destinos</li>
-          <li><a href="blog.html"> Blog </a></li>
-          <li><a href="registro.html">Registro</a></li>
-          <li><a href="login.html">Login</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
+      <div class="container">
+        <div class="logo">
+          <img width="500px" src="/Microsite-sitios-guapos/img/logo.svg" alt="Logo de SitiosGuapos" />
+        </div>
+
+        <!-- Checkbox oculto para controlar el menú -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" />
+
+        <!-- Label que actúa como botón hamburguesa -->
+        <label for="menu-toggle" class="menu-toggle-label">
+          <span class="hamburger"></span>
+        </label>
+
+        <nav class="nav-menu">
+          <!-- Logo dentro del menú lateral -->
+          <div class="nav-logo">
+            <img src="/Microsite-sitios-guapos/img/logo.svg" alt="Logo de SitiosGuapos" />
+          </div>
+
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="quienes-somos.html">Quiénes somos</a></li>
+            <li><a href="#destinos.html">Destinos</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="registro.html">Registro</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <!-- Overlay para cerrar el menú -->
+        <div class="menu-overlay"></div>
+      </div>
     </header>
     <main>
-      <h1>Cursos disponibles</h1>
-      <section>
-        <article>
-          <h2>Marketing Digital para Nómadas</h2>
-          <figure>
-            <img
-              src="img/cursos/cursos1.jpg"
-              alt="Marca personal para nómadas"
-            />
-          </figure>
-          <p>Aprende a posicionar tu marca personal mientras viajas.</p>
-          <a href="cursos/curso-marca-personal.html">Ver más</a>
-        </article>
-        <article>
-          <h2>Productividad en Zonas Rurales</h2>
-          <figure>
-            <img src="img/cursos/cursos2.jpg" alt="Estrategias profesionales" />
-          </figure>
-          <p>Estrategias para mantenerte enfocado en entornos naturales.</p>
-          <a href="cursos/curso-productividad-zonas-rurales.html">Ver más</a>
-        </article>
+      <section class="destinos__section">
+        <div class="container">
+          <h1>Experiencias que transforman</h1>
+          <div class="destinos__grid">
+            <article class="destinos__card">
+              <h2>Ruta del Río de la Miel</h2>
+              <figure>
+                <img
+                  src="/Microsite-sitios-guapos/assets/Ruta-rio-de-la-miel-Cx6n4rRL.jpg"
+                  alt="Ruta del Río de la Miel"
+                />
+              </figure>
+              <p>
+                Descubre la belleza natural de esta ruta rural con cascadas y
+                senderos únicos.
+              </p>
+              <a href="#">Explorar destino</a>
+            </article>
+            <article class="destinos__card">
+              <h2>Torcal de Antequera</h2>
+              <figure>
+                <img
+                  src="/Microsite-sitios-guapos/assets/background-D2LQNwtQ.jpg"
+                  alt="Torcal de Antequera"
+                />
+              </figure>
+              <p>
+                Paisaje kárstico único con formaciones rocosas de 150 millones
+                de años.
+              </p>
+              <a href="#">Explorar destino</a>
+            </article>
+            <article class="destinos__card">
+              <h2>Parque Natural de Doñana</h2>
+              <figure>
+                <img src="/Microsite-sitios-guapos/assets/hero-DSZr5qCf.jpg" alt="Parque Natural de Doñana" />
+              </figure>
+              <p>
+                Reserva de la Biosfera con dunas, marismas y fauna única en
+                Europa.
+              </p>
+              <a href="#">Explorar destino</a>
+            </article>
+            <article class="destinos__card">
+              <h2>Sierra de Grazalema</h2>
+              <figure>
+                <img src="/Microsite-sitios-guapos/assets/gotas-CHRJdnuM.jpeg" alt="Sierra de Grazalema" />
+              </figure>
+              <p>
+                El lugar más lluvioso de España con bosques de pinsapos y
+                senderos únicos.
+              </p>
+              <a href="#">Explorar destino</a>
+            </article>
+          </div>
+        </div>
       </section>
     </main>
     <footer id="footer">
