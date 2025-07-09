@@ -24,8 +24,8 @@
 
     @include breakpoint(desktop) {
       grid-template-columns: 1fr;
-      gap: 4rem;
-      max-width: 1400px;
+      gap: 2.5rem;
+      max-width: 1200px;
       margin: 0 auto;
     }
   }
@@ -40,14 +40,8 @@
     position: relative;
 
     @include breakpoint(desktop) {
-      font-size: 3.5rem;
-      margin-bottom: 3rem;
-
-      &::after {
-        width: 120px;
-        height: 6px;
-        bottom: -15px;
-      }
+      font-size: 2.8rem;
+      margin-bottom: 2rem;
     }
   }
 
@@ -58,7 +52,7 @@
 
     @include breakpoint(desktop) {
       grid-template-columns: repeat(3, 1fr);
-      gap: 3rem;
+      gap: 2rem;
       position: relative;
     }
   }
@@ -104,8 +98,8 @@
     }
 
     @include breakpoint(desktop) {
-      padding: 3rem 2rem;
-      border-radius: 25px;
+      padding: 2rem 1.5rem;
+      border-radius: 20px;
 
       // Efecto de profundidad en desktop
       &::after {
@@ -120,13 +114,13 @@
           rgba(255, 255, 255, 0.1) 0%,
           transparent 50%
         );
-        border-radius: 25px;
+        border-radius: 20px;
         pointer-events: none;
       }
 
       &:hover {
-        transform: translateY(-15px) scale(1.02);
-        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+        transform: translateY(-8px) scale(1.01);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
       }
     }
 
@@ -146,9 +140,9 @@
 
       @include breakpoint(desktop) {
         img {
-          width: 200px;
-          height: 200px;
-          border-width: 6px;
+          width: 140px;
+          height: 140px;
+          border-width: 4px;
         }
       }
 
@@ -172,13 +166,13 @@
         }
 
         @include breakpoint(desktop) {
-          font-size: 1.4rem;
-          margin-top: 1.5rem;
+          font-size: 1.1rem;
+          margin-top: 1rem;
 
           &::after {
-            width: 60px;
-            height: 3px;
-            bottom: -8px;
+            width: 35px;
+            height: 2px;
+            bottom: -5px;
           }
         }
       }
@@ -192,10 +186,20 @@
       opacity: 0.9;
 
       @include breakpoint(desktop) {
-        font-size: 1.2rem;
-        line-height: 1.7;
-        margin: 2rem 0 0;
+        font-size: 1rem;
+        line-height: 1.5;
+        margin: 1rem 0 0;
       }
     }
+  }
+
+  @include breakpoint(desktop) {
+    margin: 2.5rem 0;
+    padding: 2.5rem 0;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border-radius: 24px;
   }
 }
