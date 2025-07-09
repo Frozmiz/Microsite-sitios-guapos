@@ -1,46 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Blog | Alejandro Gonzalez Lopez</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <meta name="description" content="Noticias sobre mi" />
-
-    <meta property="og:title" content="" />
-    <meta property="og:type" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:image:alt" content="" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sitios Guapos - Comunidad para viajeros que buscan lugares con alma y brillo."
+    />
+    <title>Registro | Sitios Guapos</title>
 
     <link rel="icon" href="/Microsite-sitios-guapos/assets/favicon-D0vukfcW.ico" sizes="any" />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="icon.png" />
-
-    <link rel="manifest" href="site.webmanifest" />
-    <meta name="theme-color" content="#fafafa" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="stylesheet" crossorigin href="/Microsite-sitios-guapos/assets/main-VQYRD9DT.css">
   </head>
 
   <body>
     <header>
-      <figure>
-        <img
-          width="150px"
-          src="/src/img/common/logotipo.png"
-          alt="Logotipo para el proyecto"
-        />
-      </figure>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="quienes-somos.html">Quienes somos</a></li>
-          <li><a href="cursos.html"></a>Cursos</li>
-          <li>Blog</li>
-          <li><a href="registro.html">Registro</a></li>
-          <li><a href="login.html">Login</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">
+            <img width="500px" src="/Microsite-sitios-guapos/img/logo.svg" alt="Logo de SitiosGuapos" />
+          </a>
+        </div>
+
+        <!-- Checkbox oculto para controlar el menú -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" />
+
+        <!-- Label que actúa como botón hamburguesa -->
+        <label for="menu-toggle" class="menu-toggle-label">
+          <span class="hamburger"></span>
+        </label>
+
+        <nav class="nav-menu">
+          <!-- Logo dentro del menú lateral -->
+          <div class="nav-logo">
+            <a href="index.html">
+              <img src="/Microsite-sitios-guapos/img/logo.svg" alt="Logo de SitiosGuapos" />
+            </a>
+          </div>
+
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="quienes-somos.html">Quiénes somos</a></li>
+            <li><a href="destinos.html">Destinos</a></li>
+            <li><a href="#blog.html">Blog</a></li>
+            <li><a href="registro.html">Registro</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <!-- Overlay para cerrar el menú -->
+        <div class="menu-overlay"></div>
+      </div>
     </header>
     <main>
       <section>
@@ -75,7 +88,9 @@
     </main>
     <footer id="footer">
       <div class="footer-simple">
-        <img src="/Microsite-sitios-guapos/assets/logo-color-BHHX7c8k.png" alt="Logo" class="footer-logo" />
+        <a href="index.html">
+          <img src="/Microsite-sitios-guapos/assets/logo-color-BHHX7c8k.png" alt="Logo" class="footer-logo" />
+        </a>
         <p class="footer-text">
           © 2025 SitiosGuapos. Todos los derechos reservados.
         </p>

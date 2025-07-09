@@ -5,36 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Slowork - Comunidad para nómadas digitales en zonas rurales"
+      content="Sitios Guapos - Comunidad para viajeros que buscan lugares con alma y brillo."
     />
-    <title>Login</title>
-    <link rel="stylesheet" href="css/estilo.css" />
+    <title>Registro | Sitios Guapos</title>
 
     <link rel="icon" href="/Microsite-sitios-guapos/assets/favicon-D0vukfcW.ico" sizes="any" />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="stylesheet" crossorigin href="/Microsite-sitios-guapos/assets/main-VQYRD9DT.css">
   </head>
 
   <body>
     <header>
-      <div class="logo">
-        <img
-          width="500px"
-          src="img/common/logotipo.png"
-          alt="Logo de Slowork"
-        />
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">
+            <img width="500px" src="/Microsite-sitios-guapos/img/logo.svg" alt="Logo de SitiosGuapos" />
+          </a>
+        </div>
+
+        <!-- Checkbox oculto para controlar el menú -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" />
+
+        <!-- Label que actúa como botón hamburguesa -->
+        <label for="menu-toggle" class="menu-toggle-label">
+          <span class="hamburger"></span>
+        </label>
+
+        <nav class="nav-menu">
+          <!-- Logo dentro del menú lateral -->
+          <div class="nav-logo">
+            <a href="index.html">
+              <img src="/Microsite-sitios-guapos/img/logo.svg" alt="Logo de SitiosGuapos" />
+            </a>
+          </div>
+
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="quienes-somos.html">Quiénes somos</a></li>
+            <li><a href="destinos.html">Destinos</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="registro.html">Registro</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="#contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <!-- Overlay para cerrar el menú -->
+        <div class="menu-overlay"></div>
       </div>
-      <nav>
-        <ul>
-          <li>Inicio</li>
-          <li><a href="quienes-somos.html">Quiénes somos</a></li>
-          <li><a href="destinos.html">Destinos</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="registro.html">Registro</a></li>
-          <li><a href="login.html">Login</a></li>
-          <li>Contacto</li>
-        </ul>
-      </nav>
     </header>
     <main>
       <h1>Contacta con nosotros</h1>
@@ -80,7 +99,9 @@
     </main>
     <footer id="footer">
       <div class="footer-simple">
-        <img src="/Microsite-sitios-guapos/assets/logo-color-BHHX7c8k.png" alt="Logo" class="footer-logo" />
+        <a href="index.html">
+          <img src="/Microsite-sitios-guapos/assets/logo-color-BHHX7c8k.png" alt="Logo" class="footer-logo" />
+        </a>
         <p class="footer-text">
           © 2025 SitiosGuapos. Todos los derechos reservados.
         </p>
