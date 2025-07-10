@@ -7,7 +7,7 @@ export default defineConfig({
       input: [
         "index.html",
         "quienes-somos.html",
-        "destinos.html",
+        "destinos-page.html",
         "blog.html",
         "registro.html",
         "login.html",
