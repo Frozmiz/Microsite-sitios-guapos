@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Sitios Guapos - Comunidad para viajeros que buscan lugares con alma y brillo."
+      content="Sitios Guapos - Últimas noticias para viajeros. Mantente informado sobre novedades, consejos y alertas para tu próxima aventura por Andalucía y España."
     />
-    <title>Registro | Sitios Guapos</title>
+    <title>Noticias | Sitios Guapos</title>
 
     <link rel="icon" href="/Microsite-sitios-guapos/assets/favicon-D0vukfcW.ico" sizes="any" />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-    <link rel="stylesheet" crossorigin href="/Microsite-sitios-guapos/assets/main-BWbYu4iL.css">
+    <script type="module" crossorigin src="/Microsite-sitios-guapos/assets/main-CQUPFD73.js"></script>
+    <link rel="stylesheet" crossorigin href="/Microsite-sitios-guapos/assets/main-DBOj0yy6.css">
   </head>
 
   <body>
@@ -44,7 +45,7 @@
             <li><a href="index.html">Inicio</a></li>
             <li><a href="quienes-somos.html">Quiénes somos</a></li>
             <li><a href="destinos-page.html">Destinos</a></li>
-            <li><a href="#blog.html">Blog</a></li>
+            <li><a href="blog.html">Noticias</a></li>
             <li><a href="registro.html">Registro</a></li>
             <li><a href="login.html">Login</a></li>
             <li><a href="contacto.html">Contacto</a></li>
@@ -55,57 +56,222 @@
         <div class="menu-overlay"></div>
       </div>
     </header>
+
     <main>
-      <section>
-        <h2>Últimas noticias</h2>
-        <article>
-          <h3>
-            Los mejores destinos para nómadas digitales en 2025 ¡con
-            calificaciones de Wi-Fi!
-          </h3>
-          <p>
-            A medida que el mundo continúa adoptando el trabajo remoto, elegir
-            la ciudad correcta como nómada digital es más crítico que nunca.
-          </p>
-          <a href="blog/mejores-destinos-nomadas.html">Ver noticia →</a>
-        </article>
-        <article>
-          <h3>
-            Cómo establecer contactos como nómada digital y encontrar
-            oportunidades de trabajo a distancia
-          </h3>
-          <p>
-            Construir una carrera exitosa mientras viaja requiere más que solo
-            asegurar un trabajo remoto
-          </p>
-          <p>
-            <a href="blog/establecer-contactos-encontrar-oportunidades.html"
-              >Ver noticia →</a
-            >
-          </p>
-        </article>
+      <section class="blog__section">
+        <div class="container">
+          <div class="blog__header">
+            <h1 class="blog__title">Últimas Noticias</h1>
+            <p class="blog__subtitle">
+              Mantente informado sobre novedades, consejos y alertas para tu
+              próxima aventura por Andalucía y España
+            </p>
+          </div>
+
+          <div class="blog__grid">
+            <!-- Artículo destacado -->
+            <article class="blog__article blog__featured">
+              <div class="blog__article-image">
+                <img src="/Microsite-sitios-guapos/img/hero.jpg" alt="Paisaje de Andalucía" />
+              </div>
+              <div class="blog__article-meta">
+                <span class="blog__article-date">15 de Enero, 2025</span>
+                <span class="blog__article-category">Destacado</span>
+              </div>
+              <h2 class="blog__article-title">
+                España actualiza requisitos de visado Schengen para 2025
+              </h2>
+              <p class="blog__article-excerpt">
+                A partir de agosto de 2025, los viajeros deberán registrarse
+                previamente para obtener autorización ETIAS. Este nuevo sistema
+                afectará a todos los visitantes de países que no requieren
+                visado para la zona Schengen. Te contamos todo lo que necesitas
+                saber para preparar tu viaje a Andalucía y el resto de España.
+              </p>
+              <a href="#" class="blog__article-link">Leer noticia completa</a>
+            </article>
+
+            <!-- Artículo regular -->
+            <article class="blog__article">
+              <div class="blog__article-image">
+                <img
+                  src="/Microsite-sitios-guapos/img/Ruta-rio-de-la-miel.jpg"
+                  alt="Ruta del Río de la Miel"
+                />
+              </div>
+              <div class="blog__article-meta">
+                <span class="blog__article-date">12 de Enero, 2025</span>
+                <span class="blog__article-category">Transporte</span>
+              </div>
+              <h3 class="blog__article-title">
+                Huelga de transporte en Andalucía: Afecta rutas turísticas
+              </h3>
+              <p class="blog__article-excerpt">
+                Los conductores de buses han convocado paros parciales,
+                afectando rutas turísticas desde el 10 de julio. Si tienes
+                planeado visitar destinos como Granada, Córdoba o Sevilla, te
+                recomendamos revisar horarios alternativos.
+              </p>
+              <a href="#" class="blog__article-link">Leer noticia completa</a>
+            </article>
+
+            <!-- Artículo regular -->
+            <article class="blog__article">
+              <div class="blog__article-image">
+                <img src="/Microsite-sitios-guapos/img/gotas.jpeg" alt="Paisaje natural" />
+              </div>
+              <div class="blog__article-meta">
+                <span class="blog__article-date">10 de Enero, 2025</span>
+                <span class="blog__article-category">Destinos</span>
+              </div>
+              <h3 class="blog__article-title">
+                Los mejores destinos para nómadas digitales en Andalucía 2025
+              </h3>
+              <p class="blog__article-excerpt">
+                A medida que el mundo continúa adoptando el trabajo remoto,
+                elegir la ciudad correcta como nómada digital es más crítico que
+                nunca. Descubre las mejores opciones en Andalucía con
+                calificaciones de Wi-Fi y calidad de vida.
+              </p>
+              <a href="#" class="blog__article-link">Leer noticia completa</a>
+            </article>
+
+            <!-- Artículo regular -->
+            <article class="blog__article">
+              <div class="blog__article-image">
+                <img src="/Microsite-sitios-guapos/img/hero.jpg" alt="Comunidad de viajeros" />
+              </div>
+              <div class="blog__article-meta">
+                <span class="blog__article-date">8 de Enero, 2025</span>
+                <span class="blog__article-category">Comunidad</span>
+              </div>
+              <h3 class="blog__article-title">
+                Cómo establecer contactos como nómada digital en Andalucía
+              </h3>
+              <p class="blog__article-excerpt">
+                Construir una carrera exitosa mientras viajas requiere más que
+                solo asegurar un trabajo remoto. Te compartimos estrategias para
+                conectar con otros viajeros y encontrar oportunidades únicas en
+                el sur de España.
+              </p>
+              <a href="#" class="blog__article-link">Leer noticia completa</a>
+            </article>
+
+            <!-- Artículo regular -->
+            <article class="blog__article">
+              <div class="blog__article-image">
+                <img
+                  src="/Microsite-sitios-guapos/img/Ruta-rio-de-la-miel.jpg"
+                  alt="Rutas de senderismo"
+                />
+              </div>
+              <div class="blog__article-meta">
+                <span class="blog__article-date">5 de Enero, 2025</span>
+                <span class="blog__article-category">Aventura</span>
+              </div>
+              <h3 class="blog__article-title">
+                Nuevas rutas de senderismo descubiertas en Sierra de Grazalema
+              </h3>
+              <p class="blog__article-excerpt">
+                Exploradores locales han descubierto senderos inéditos en el
+                Parque Natural Sierra de Grazalema. Estas rutas ofrecen vistas
+                espectaculares y conectan pueblos blancos tradicionales con
+                paisajes de ensueño.
+              </p>
+              <a href="#" class="blog__article-link">Leer noticia completa</a>
+            </article>
+
+            <!-- Artículo regular -->
+            <article class="blog__article">
+              <div class="blog__article-image">
+                <img src="/Microsite-sitios-guapos/img/gotas.jpeg" alt="Gastronomía andaluza" />
+              </div>
+              <div class="blog__article-meta">
+                <span class="blog__article-date">3 de Enero, 2025</span>
+                <span class="blog__article-category">Gastronomía</span>
+              </div>
+              <h3 class="blog__article-title">
+                Los secretos de la gastronomía andaluza: De tapas a tradición
+              </h3>
+              <p class="blog__article-excerpt">
+                Descubre los platos más auténticos de Andalucía, desde las
+                famosas tapas hasta recetas centenarias que han pasado de
+                generación en generación. Una guía completa para los amantes de
+                la buena mesa.
+              </p>
+              <a href="#" class="blog__article-link">Leer noticia completa</a>
+            </article>
+
+            <!-- Artículo regular -->
+            <article class="blog__article">
+              <div class="blog__article-image">
+                <img src="/Microsite-sitios-guapos/img/hero.jpg" alt="Festivales culturales" />
+              </div>
+              <div class="blog__article-meta">
+                <span class="blog__article-date">1 de Enero, 2025</span>
+                <span class="blog__article-category">Cultura</span>
+              </div>
+              <h3 class="blog__article-title">
+                Festivales culturales imperdibles en Andalucía para 2025
+              </h3>
+              <p class="blog__article-excerpt">
+                Desde la Feria de Abril en Sevilla hasta el Festival de Flamenco
+                de Granada, te presentamos los eventos culturales más
+                importantes que no puedes perderte este año en Andalucía.
+              </p>
+              <a href="#" class="blog__article-link">Leer noticia completa</a>
+            </article>
+
+            <!-- Artículo regular -->
+            <article class="blog__article">
+              <div class="blog__article-image">
+                <img
+                  src="/Microsite-sitios-guapos/img/Ruta-rio-de-la-miel.jpg"
+                  alt="Alojamiento sostenible"
+                />
+              </div>
+              <div class="blog__article-meta">
+                <span class="blog__article-date">30 de Diciembre, 2024</span>
+                <span class="blog__article-category">Sostenibilidad</span>
+              </div>
+              <h3 class="blog__article-title">
+                Alojamientos sostenibles que están cambiando el turismo en
+                Andalucía
+              </h3>
+              <p class="blog__article-excerpt">
+                Conoce las iniciativas más innovadoras en turismo sostenible.
+                Desde casas rurales con energía solar hasta hoteles que
+                preservan la arquitectura tradicional, descubre cómo viajar de
+                manera responsable.
+              </p>
+              <a href="#" class="blog__article-link">Leer noticia completa</a>
+            </article>
+          </div>
+        </div>
       </section>
     </main>
+
     <footer id="footer">
       <div class="footer-simple">
         <a href="index.html">
-          <img src="/Microsite-sitios-guapos/assets/logo-color-BHHX7c8k.png" alt="Logo" class="footer-logo" />
+          <img src="/Microsite-sitios-guapos/img/logo-color.png" alt="Logo" class="footer-logo" />
         </a>
         <p class="footer-text">
           © 2025 SitiosGuapos. Todos los derechos reservados.
         </p>
         <ul class="footer-social">
           <li>
-            <a href="#"><img src="/Microsite-sitios-guapos/assets/logo-rIM3rS1f.svg" alt="Instagram" /></a>
+            <a href="#"><img src="/Microsite-sitios-guapos/img/logo.svg" alt="Instagram" /></a>
           </li>
           <li>
-            <a href="#"><img src="/Microsite-sitios-guapos/assets/logo-rIM3rS1f.svg" alt="Twitter" /></a>
+            <a href="#"><img src="/Microsite-sitios-guapos/img/logo.svg" alt="Twitter" /></a>
           </li>
           <li>
-            <a href="#"><img src="/Microsite-sitios-guapos/assets/logo-rIM3rS1f.svg" alt="Facebook" /></a>
+            <a href="#"><img src="/Microsite-sitios-guapos/img/logo.svg" alt="Facebook" /></a>
           </li>
         </ul>
       </div>
     </footer>
+    <script src="/src/validation.js"></script>
   </body>
 </html>
