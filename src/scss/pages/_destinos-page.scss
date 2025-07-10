@@ -1,0 +1,166 @@
+@use "../abstracts/_variables" as *;
+@use "../abstracts/_mixins" as *;
+
+// Estilos para la página de destinos
+.destinos-page__section {
+  // Sección de destinos con diseño moderno similar a quienes-somos
+  background: linear-gradient(
+    135deg,
+    rgba(#a3bbb8, 0.8) 0%,
+    rgba(#8ba9a6, 0.9) 100%
+  );
+  margin: 4rem 0;
+  padding: 4rem 0;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+
+    @include breakpoint(desktop) {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  }
+
+  .destinos-page__title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: $black-blue;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    text-align: center;
+    position: relative;
+
+    @include breakpoint(desktop) {
+      font-size: 2.8rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .destinos-page__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+
+    @include breakpoint(desktop) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      position: relative;
+    }
+  }
+
+  // Estilo moderno para las cards de destinos
+  .destinos-page__card {
+    background: $black-blue;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.2s, box-shadow 0.2s;
+    padding-bottom: 0.5rem;
+
+    &:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+    }
+
+    .destinos-page__img-wrapper {
+      width: 100%;
+      height: 180px;
+      overflow: hidden;
+      border-top-left-radius: 18px;
+      border-top-right-radius: 18px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
+
+    .destinos-page__card-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem 1.2rem 0.2rem 1.2rem;
+    }
+
+    .destinos-page__card-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: $yellow;
+      margin-bottom: 0.7rem;
+      margin-top: 0.2rem;
+    }
+
+    .destinos-page__card-desc {
+      color: $grey-light;
+      font-size: 1rem;
+      margin-bottom: 1.2rem;
+      flex: 1;
+    }
+
+    .destinos-page__card-btn {
+      width: 100%;
+      text-align: center;
+      background: none;
+      color: $green-blue;
+      font-weight: 600;
+      border: none;
+      border-radius: 0 0 18px 18px;
+      padding: 0.7rem 0;
+      margin: 0;
+      transition: background 0.2s, color 0.2s;
+      cursor: pointer;
+      position: relative;
+      font-size: 1.1rem;
+      display: block;
+      border-top: 1px solid $grey-light;
+
+      &:hover {
+        background: $green-blue;
+        color: white;
+      }
+    }
+  }
+
+  @include breakpoint(desktop) {
+    margin: 2.5rem 0;
+    padding: 2.5rem 0;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// Estilos específicos para la página de destinos
+main {
+  .destinos-page__section {
+    margin-top: 2rem;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: $black-blue;
+    margin: 2rem 0;
+
+    @include breakpoint(desktop) {
+      font-size: 3rem;
+      margin: 3rem 0;
+    }
+  }
+}
