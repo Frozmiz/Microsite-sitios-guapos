@@ -157,18 +157,10 @@ header {
         transition: all 0.3s ease;
 
         &:first-child {
-          border-top: none; // Ya no necesitamos borde superior
+          border-top: none;
         }
-
         &:last-child {
           border-bottom: none;
-        }
-
-        // Animación escalonada para cada elemento
-        @for $i from 1 through 10 {
-          &:nth-child(#{$i}) {
-            animation-delay: #{($i + 1) * 0.1}s; // +1 para dar tiempo al logo
-          }
         }
 
         a {
@@ -220,7 +212,13 @@ header {
     ul li {
       opacity: 1;
       transform: translateX(0);
-      animation: slideInUp 0.4s ease-out both;
+      animation: fadeInUp 0.6s forwards;
+      // Animación escalonada para cada elemento
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          animation-delay: #{($i + 1) * 0.1}s; // +1 para dar tiempo al logo
+        }
+      }
     }
   }
 
