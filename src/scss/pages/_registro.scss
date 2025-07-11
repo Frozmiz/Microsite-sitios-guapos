@@ -1,0 +1,172 @@
+// Estilos para la página de registro
+.registro {
+  max-width: 480px;
+  margin: 2rem auto;
+  padding: 2rem 1.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.08);
+  text-align: center;
+
+  h1 {
+    font-size: 2.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary, #1e3a5c);
+  }
+  p {
+    color: #555;
+    margin-bottom: 2rem;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    .form__group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+
+      label {
+        font-weight: 600;
+        margin-bottom: 0.3rem;
+        color: #1e3a5c;
+      }
+      input,
+      textarea {
+        color: #000;
+        width: 100%;
+        padding: 0.7rem 1rem;
+        border: 1.5px solid #cfd8dc;
+        border-radius: 0.6rem;
+        font-size: 1rem;
+        background: #f7fafc;
+        transition: border-color 0.3s, box-shadow 0.3s;
+        outline: none;
+      }
+      input:focus,
+      textarea:focus {
+        border-color: var(--color-primary, #1e3a5c);
+        box-shadow: 0 0 0 2px #b3c6e0;
+      }
+      .form__feedback {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        min-height: 1.5em;
+        margin-top: 0.2rem;
+      }
+      .error-message {
+        color: #e53935;
+        font-size: 0.95em;
+        opacity: 0;
+        transition: opacity 0.3s;
+        margin: 0;
+      }
+      .error-icon,
+      .success-icon {
+        font-size: 1.1em;
+        opacity: 0;
+        transition: opacity 0.3s, transform 0.3s;
+        position: static;
+        margin-left: 0;
+        margin-right: 0;
+        transform: scale(0.8);
+      }
+      .error-icon {
+        color: #e53935;
+      }
+      .success-icon {
+        color: #43a047;
+      }
+      &.has-error input,
+      &.has-error textarea {
+        border-color: #e53935;
+        background: #fff5f5;
+        animation: shake 0.25s linear 1;
+      }
+      &.has-error .error-message {
+        opacity: 1;
+      }
+      &.has-error .error-icon {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+      &.has-success input,
+      &.has-success textarea {
+        border-color: #43a047;
+        background: #f1fff4;
+      }
+      &.has-success .success-icon {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+    }
+    .form__submit {
+      background: linear-gradient(90deg, #1e3a5c 60%, #43a047 100%);
+      color: #fff;
+      font-weight: 700;
+      border: none;
+      border-radius: 0.6rem;
+      padding: 1rem 0;
+      width: 100%;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.9s, transform 0.6s;
+      margin-bottom: 0.5rem;
+    }
+    .form__submit:hover {
+      background: linear-gradient(90deg, #43a047 60%, #1e3a5c 100%);
+      transform: translateY(-2px) scale(1.03);
+    }
+    input[type="reset"] {
+      background: none;
+      color: #888;
+      border: none;
+      margin-left: 0.5rem;
+      cursor: pointer;
+      font-size: 0.98rem;
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .registro {
+    padding: 1.2rem 0.5rem;
+    border-radius: 0.7rem;
+    h1 {
+      font-size: 1.4rem;
+    }
+    .form {
+      gap: 0.8rem;
+      .form__submit {
+        font-size: 1rem;
+        padding: 0.7rem 0;
+      }
+    }
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-6px);
+  }
+  40% {
+    transform: translateX(6px);
+  }
+  60% {
+    transform: translateX(-4px);
+  }
+  80% {
+    transform: translateX(4px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

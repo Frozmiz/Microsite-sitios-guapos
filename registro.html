@@ -56,49 +56,109 @@
       </div>
     </header>
     <main>
-      <h1>Registrate</h1>
-      <p>Unete a la comunidad de nomadas digitales mas importante del mundo</p>
-      <form action="" method="post">
+      <section class="registro">
+        <h1>Únete a la comunidad de viajeros</h1>
         <p>
-          <label for="name">Nombre completo</label
-          ><input type="text" name="name" id="name" required />
+          Descubre y comparte los rincones con más magia de Andalucía y España.
+          ¡Forma parte de Sitios Guapos!
         </p>
+        <form
+          class="form"
+          action=""
+          method="post"
+          enctype="multipart/form-data"
+          novalidate
+        >
+          <div class="form__group">
+            <label for="name">Nombre completo</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Tu nombre y apellidos"
+              required
+            />
+            <div class="form__feedback">
+              <span class="error-message"></span>
+              <span class="error-icon">&#9888;</span>
+              <span class="success-icon">&#10003;</span>
+            </div>
+          </div>
 
-        <p>
-          <label for="nacimiento">Fecha de nacimiento</label>
-          <input type="date" name="nacimiento" id="nacimiento" />
-        </p>
+          <div class="form__group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="tucorreo@ejemplo.com"
+              required
+            />
+            <div class="form__feedback">
+              <span class="error-message"></span>
+              <span class="error-icon">&#9888;</span>
+              <span class="success-icon">&#10003;</span>
+            </div>
+          </div>
 
-        <p>
-          <label for="email">Email</label>
-          <input type="text" name="email" id="email" />
-        </p>
+          <div class="form__group">
+            <label for="nacimiento">Fecha de nacimiento</label>
+            <input type="date" name="nacimiento" id="nacimiento" required />
+            <div class="form__feedback">
+              <span class="error-message"></span>
+              <span class="error-icon">&#9888;</span>
+              <span class="success-icon">&#10003;</span>
+            </div>
+          </div>
 
-        <p>
-          <label for="direccion">Direccion</label>
-          <input type="text" name="direccion" id="direccion" />
-        </p>
+          <div class="form__group">
+            <label for="direccion">Ciudad de residencia</label>
+            <input
+              type="text"
+              name="direccion"
+              id="direccion"
+              placeholder="¿Dónde vives?"
+              required
+            />
+            <div class="form__feedback">
+              <span class="error-message"></span>
+              <span class="error-icon">&#9888;</span>
+              <span class="success-icon">&#10003;</span>
+            </div>
+          </div>
 
-        <p>
-          <label for="web">Pagina web</label>
-          <input type="url" name="web" id="web" />
-        </p>
+          <div class="form__group">
+            <label for="web">Página web o red social</label>
+            <input
+              type="url"
+              name="web"
+              id="web"
+              placeholder="Comparte tu blog o Instagram (opcional)"
+            />
+          </div>
 
-        <p>
-          <label for="photo">Foto</label>
-          <input type="file" name="photo" id="photo" />
-        </p>
+          <div class="form__group">
+            <label for="photo">Foto de perfil</label>
+            <input type="file" name="photo" id="photo" accept="image/*" />
+          </div>
 
-        <p>
-          <label for="bio">Biografia</label>
-          <textarea name="bio" id="bio" cols="30" rows="5"></textarea>
-        </p>
+          <div class="form__group">
+            <label for="bio">Cuéntanos sobre ti</label>
+            <textarea
+              name="bio"
+              id="bio"
+              cols="30"
+              rows="4"
+              placeholder="¿Qué te inspira a viajar? ¿Tienes algún rincón favorito?"
+            ></textarea>
+          </div>
 
-        <p>
-          <button>Enviar</button>
-          <input type="reset" value="Borrar formulario" />
-        </p>
-      </form>
+          <div class="form__group">
+            <button class="form__submit">Enviar</button>
+            <input type="reset" value="Borrar formulario" />
+          </div>
+        </form>
+      </section>
     </main>
     <footer id="footer">
       <div class="footer-simple">
@@ -121,5 +181,7 @@
         </ul>
       </div>
     </footer>
+
+    <script src="/src/validation.js"></script>
   </body>
 </html>

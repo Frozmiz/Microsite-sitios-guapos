@@ -3,8 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const form = document.querySelector('.form');
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
-    const messageInput = document.getElementById('message');
     const submitButton = document.querySelector('.form__submit');
+    const nacimientoInput = document.getElementById('nacimiento');
+    const direccionInput = document.getElementById('direccion');
 
     // Email validation regex
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -32,16 +33,34 @@ document.addEventListener('DOMContentLoaded', function () {
         errorIcon.classList.remove('show');
     }
 
+    function showSuccess(input) {
+        const formGroup = input.closest('.form__group');
+        const successIcon = formGroup.querySelector('.success-icon');
+        formGroup.classList.remove('has-error');
+        formGroup.classList.add('has-success');
+        input.classList.remove('error');
+        successIcon.classList.add('show');
+    }
+    function hideSuccess(input) {
+        const formGroup = input.closest('.form__group');
+        const successIcon = formGroup.querySelector('.success-icon');
+        formGroup.classList.remove('has-success');
+        successIcon.classList.remove('show');
+    }
+
     function validateName() {
         const value = nameInput.value.trim();
         if (value === '') {
-            showError(nameInput, "Sorry, can't be empty");
+            showError(nameInput, "El nombre no puede estar vacío");
+            hideSuccess(nameInput);
             return false;
         } else if (value.length < 2) {
-            showError(nameInput, "Sorry, invalid format here");
+            showError(nameInput, "Introduce al menos 2 caracteres");
+            hideSuccess(nameInput);
             return false;
         } else {
             hideError(nameInput);
+            showSuccess(nameInput);
             return true;
         }
     }
@@ -49,27 +68,42 @@ document.addEventListener('DOMContentLoaded', function () {
     function validateEmail() {
         const value = emailInput.value.trim();
         if (value === '') {
-            showError(emailInput, "Sorry, can't be empty");
+            showError(emailInput, "El email no puede estar vacío");
+            hideSuccess(emailInput);
             return false;
         } else if (!emailRegex.test(value)) {
-            showError(emailInput, "Sorry, invalid format here");
+            showError(emailInput, "Formato de email no válido");
+            hideSuccess(emailInput);
             return false;
         } else {
             hideError(emailInput);
+            showSuccess(emailInput);
             return true;
         }
     }
 
-    function validateMessage() {
-        const value = messageInput.value.trim();
+    function validateNacimiento() {
+        const value = nacimientoInput.value.trim();
         if (value === '') {
-            showError(messageInput, "Sorry, can't be empty");
-            return false;
-        } else if (value.length < 10) {
-            showError(messageInput, "Sorry, message too short");
+            showError(nacimientoInput, "La fecha de nacimiento es obligatoria");
+            hideSuccess(nacimientoInput);
             return false;
         } else {
-            hideError(messageInput);
+            hideError(nacimientoInput);
+            showSuccess(nacimientoInput);
+            return true;
+        }
+    }
+
+    function validateDireccion() {
+        const value = direccionInput.value.trim();
+        if (value === '') {
+            showError(direccionInput, "La ciudad de residencia es obligatoria");
+            hideSuccess(direccionInput);
+            return false;
+        } else {
+            hideError(direccionInput);
+            showSuccess(direccionInput);
             return true;
         }
     }
@@ -77,7 +111,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // Real-time validation
     nameInput.addEventListener('blur', validateName);
     emailInput.addEventListener('blur', validateEmail);
-    messageInput.addEventListener('blur', validateMessage);
+    nacimientoInput.addEventListener('blur', validateNacimiento);
+    direccionInput.addEventListener('blur', validateDireccion);
 
     // Input validation (while typing)
     nameInput.addEventListener('input', function () {
@@ -92,16 +127,23 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    messageInput.addEventListener('input', function () {
-        if (messageInput.classList.contains('error')) {
-            validateMessage();
+    nacimientoInput.addEventListener('input', function () {
+        if (nacimientoInput.classList.contains('error')) {
+            validateNacimiento();
+        }
+    });
+
+    direccionInput.addEventListener('input', function () {
+        if (direccionInput.classList.contains('error')) {
+            validateDireccion();
         }
     });
 
     // Clear errors on focus
-    nameInput.addEventListener('focus', () => hideError(nameInput));
-    emailInput.addEventListener('focus', () => hideError(emailInput));
-    messageInput.addEventListener('focus', () => hideError(messageInput));
+    nameInput.addEventListener('focus', () => { hideError(nameInput); hideSuccess(nameInput); });
+    emailInput.addEventListener('focus', () => { hideError(emailInput); hideSuccess(emailInput); });
+    nacimientoInput.addEventListener('focus', () => { hideError(nacimientoInput); hideSuccess(nacimientoInput); });
+    direccionInput.addEventListener('focus', () => { hideError(direccionInput); hideSuccess(direccionInput); });
 
     // Form submission
     submitButton.addEventListener('click', function (e) {
@@ -109,9 +151,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const isNameValid = validateName();
         const isEmailValid = validateEmail();
-        const isMessageValid = validateMessage();
+        const isNacimientoValid = validateNacimiento();
+        const isDireccionValid = validateDireccion();
 
-        if (isNameValid && isEmailValid && isMessageValid) {
+        if (isNameValid && isEmailValid && isNacimientoValid && isDireccionValid) {
             // Form is valid, you can submit it here
             console.log('Form is valid, ready to submit');
             alert('Message sent successfully!');
