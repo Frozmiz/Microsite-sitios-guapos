@@ -140,6 +140,20 @@
     }
   }
 
+  .destinos-page__intro {
+    font-size: 1.18rem;
+    color: $black-blue;
+    text-align: center;
+    margin: -2.5rem 0 1.1rem 0;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    font-weight: 400;
+    /* Sin fondo ni caja */
+    padding: 0;
+  }
+
   @include breakpoint(desktop) {
     margin: 2.5rem 0;
     padding: 2.5rem 0;
@@ -161,10 +175,23 @@ main {
     font-weight: 800;
     color: $black-blue;
     margin: 2rem 0;
+    position: relative;
 
     @include breakpoint(desktop) {
       font-size: 3rem;
       margin: 3rem 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, #15331e, #348f64);
+      border-radius: 2px;
     }
   }
 }
