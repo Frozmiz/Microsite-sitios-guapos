@@ -163,10 +163,10 @@
   }
 
   .news__actions {
+    order: 3;
     text-align: center;
     margin-top: 2rem;
     .btn {
-      /* Solo alineación, sin sobrescribir estilos globales */
     }
   }
 }
