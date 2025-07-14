@@ -74,7 +74,7 @@
       }
 
       @include breakpoint(desktopxl) {
-        font-size: 3rem;
+        font-size: 2.8rem;
       }
     }
 
@@ -92,7 +92,7 @@
       }
 
       @include breakpoint(desktop) {
-        font-size: 1.375rem;
+        font-size: 1.1rem;
       }
     }
   }
@@ -282,16 +282,16 @@
       padding: 2.5rem;
 
       h3 {
-        font-size: 2.25rem;
+        font-size: 1.7rem;
       }
 
       figure img {
-        height: 350px;
+        height: 250px;
       }
 
       .btn {
-        padding: 1.25rem 2.5rem;
-        font-size: 1.25rem;
+        padding: 1rem 2rem;
+        font-size: 1rem;
         min-width: 220px;
       }
     }
