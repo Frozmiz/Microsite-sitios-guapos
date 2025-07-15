@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Cerrar menú con tecla ESC (opcional)
+    // Cerrar menú con tecla ESC 
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && menuToggle.checked) {
             menuToggle.checked = false;
