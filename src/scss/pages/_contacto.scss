@@ -73,12 +73,10 @@ div.div-contacto__layout {
 }
 
 .contacto__section form input,
-.contacto__section form textarea,
-.mapa__section form input,
-.mapa__section form textarea {
+.contacto__section form textarea {
   color: $grey;
   width: 100%;
-  padding: 1.15rem 1.1rem;
+  padding: 0.4rem 1.3rem;
   border: 1.5px solid $grey-light;
   border-radius: 0.7rem;
   font-size: 1.22rem;
