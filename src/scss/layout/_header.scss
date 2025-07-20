@@ -98,7 +98,7 @@ header {
   .nav-menu {
     position: fixed;
     top: 0;
-    left: -100%; // Oculto por defecto
+    left: -100%; // Oculto
     width: 280px;
     height: 100vh;
     background-color: rgba($green-blue, 0.8);
@@ -241,9 +241,7 @@ header {
     }
   }
 
-  // Versión desktop (tablet y arriba)
   @media (min-width: 768px) {
-    // El header queda transparente
     background: transparent;
     box-shadow: none;
     border-bottom-left-radius: 0;
