@@ -67,7 +67,7 @@
         margin-top: 0.2rem;
       }
       .error-message {
-        color: $yellow;
+        color: red;
         font-size: 0.95em;
         opacity: 0;
         transition: opacity 0.3s;
@@ -84,14 +84,14 @@
         transform: scale(0.8);
       }
       .error-icon {
-        color: $yellow;
+        color: red;
       }
       .success-icon {
         color: $green;
       }
       &.has-error input,
       &.has-error textarea {
-        border-color: $yellow;
+        border-color: red;
         background: #fff;
         animation: shake 0.25s linear 1;
       }
