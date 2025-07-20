@@ -3,17 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
     <meta
       name="description"
-      content="Sitios Guapos - Comunidad para viajeros que buscan lugares con alma y brillo."
+      content="Sitios Guapos - Comunidad para viajeros que buscan lugares con alma y brillo por Andalucia y España general"
     />
-    <title>Registro | Sitios Guapos</title>
+    <title>Sitios Guapos | Contacto</title>
 
     <link rel="icon" href="/Microsite-sitios-guapos/assets/favicon-D0vukfcW.ico" sizes="any" />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-    <script type="module" crossorigin src="/Microsite-sitios-guapos/assets/validation-DdBP0FYs.js"></script>
-    <link rel="stylesheet" crossorigin href="/Microsite-sitios-guapos/assets/validation-Ce2rtKgi.css">
+    <script type="module" crossorigin src="/Microsite-sitios-guapos/assets/validation-DjMofXID.js"></script>
+    <link rel="stylesheet" crossorigin href="/Microsite-sitios-guapos/assets/validation-DlkMkMG2.css">
   </head>
 
   <body>
@@ -57,46 +63,55 @@
       </div>
     </header>
     <main>
-      <h1>Contacta con nosotros</h1>
-      <p>¿Dudas? No dudes y contacta con nuestro equipo de slowork</p>
-      <section>
-        <form action="" enctype="">
-          <p>
-            <label for="name">Nombre completo</label
-            ><input type="text" name="name" id="name" required />
+      <div class="div-contacto__layout">
+        <section class="contacto__section">
+          <h1>¡Estamos aquí para ayudarte!</h1>
+          <p class="contacto__section-p">
+            ¿Tienes dudas, sugerencias o simplemente quieres saludar? Escríbenos
+            y nuestro equipo te responderá lo antes posible. ¡Nos encanta saber
+            de ti!
           </p>
-          <p>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" />
-          </p>
+          <form action="" enctype="">
+            <p>
+              <label for="name">Nombre completo</label
+              ><input type="text" name="name" id="name" required />
+            </p>
+            <p>
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" />
+            </p>
 
-          <p>
-            <label for="comentario">Comentario</label>
-            <textarea
-              name="comentario"
-              id="comentario"
-              cols="30"
-              rows="5"
-            ></textarea>
-          </p>
-          <p>
-            <button>Enviar</button>
-            <input type="reset" value="Borrar formulario" />
-          </p>
-        </form>
-      </section>
-      <section>
-        <h2>¡Encuentranos aqui mismo!</h2>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.154318879265!2d-5.995188623689694!3d37.386182634448765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126c1a1eb7d42b%3A0x9d4fd647e46b7247!2sLa%20Giralda!5e0!3m2!1ses!2ses!4v1747746108073!5m2!1ses!2ses"
-          width="500"
-          height="300"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </section>
+            <p>
+              <label for="comentario">Comentario</label>
+              <textarea
+                name="comentario"
+                id="comentario"
+                cols="30"
+                rows="5"
+              ></textarea>
+            </p>
+            <p>
+              <button>Enviar</button>
+              <input type="reset" value="Borrar formulario" />
+            </p>
+          </form>
+        </section>
+        <section class="mapa__section">
+          <h2>¡Encuéntranos aquí mismo!</h2>
+          <div class="mapa__direccion">
+            <svg viewBox="0 0 24 24"></svg>
+            <p>Avenida de la Creatividad, 123, 4ºB, 41001 Sevilla, España</p>
+          </div>
+          <div class="mapa__container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.154318879265!2d-5.995188623689694!3d37.386182634448765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126c1a1eb7d42b%3A0x9d4fd647e46b7247!2sLa%20Giralda!5e0!3m2!1ses!2ses!4v1747746108073!5m2!1ses!2ses"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </section>
+      </div>
     </main>
     <footer id="footer">
       <div class="footer-simple">
