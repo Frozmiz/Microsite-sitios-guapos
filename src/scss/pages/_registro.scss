@@ -175,6 +175,21 @@
   }
 }
 
+@include breakpoint(desktop) {
+  .registro .form__group {
+    .form__feedback {
+      justify-content: center;
+      text-align: center;
+      margin-top: 0.2rem;
+      margin-left: 15rem;
+    }
+    .error-message {
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+
 @keyframes shake {
   0% {
     transform: translateX(0);
