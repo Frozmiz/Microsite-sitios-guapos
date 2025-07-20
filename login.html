@@ -55,23 +55,25 @@
       </div>
     </header>
     <main>
-      <h1>Iniciar sesión</h1>
-      <form action="post" enctype="multipart/form-data">
-        <p>
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email" />
-        </p>
-
-        <p>
-          <label for="password">Contraseña</label>
-          <input type="password" name="password" id="password" />
-        </p>
-
-        <p>
-          <button>Enviar</button>
-          <input type="reset" value="Borrar formulario" />
-        </p>
-      </form>
+      <section class="login__section">
+        <div class="container">
+          <form class="login-form" action="post" enctype="multipart/form-data">
+            <h1>Iniciar sesión</h1>
+            <p>
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" />
+            </p>
+            <p>
+              <label for="password">Contraseña</label>
+              <input type="password" name="password" id="password" />
+            </p>
+            <p>
+              <button>Enviar</button>
+              <input type="reset" value="Borrar formulario" />
+            </p>
+          </form>
+        </div>
+      </section>
     </main>
     <footer id="footer">
       <div class="footer-simple">
