@@ -163,3 +163,133 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+// Login form validation
+document.addEventListener('DOMContentLoaded', function () {
+    const loginForm = document.querySelector('.login__section .form');
+
+    if (loginForm) {
+        const loginEmailInput = document.getElementById('email');
+        const loginPasswordInput = document.getElementById('password');
+        const loginSubmitButton = loginForm.querySelector('.form__submit');
+
+        // Email validation regex
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        function showError(input, message) {
+            const formGroup = input.closest('.form__group');
+            const errorMessage = formGroup.querySelector('.error-message');
+            const errorIcon = formGroup.querySelector('.error-icon');
+
+            formGroup.classList.add('has-error');
+            input.classList.add('error');
+            errorMessage.textContent = message;
+            errorMessage.classList.add('show');
+            errorIcon.classList.add('show');
+        }
+
+        function hideError(input) {
+            const formGroup = input.closest('.form__group');
+            const errorMessage = formGroup.querySelector('.error-message');
+            const errorIcon = formGroup.querySelector('.error-icon');
+
+            formGroup.classList.remove('has-error');
+            input.classList.remove('error');
+            errorMessage.classList.remove('show');
+            errorIcon.classList.remove('show');
+        }
+
+        function showSuccess(input) {
+            const formGroup = input.closest('.form__group');
+            const successIcon = formGroup.querySelector('.success-icon');
+            formGroup.classList.remove('has-error');
+            formGroup.classList.add('has-success');
+            input.classList.remove('error');
+            successIcon.classList.add('show');
+        }
+
+        function hideSuccess(input) {
+            const formGroup = input.closest('.form__group');
+            const successIcon = formGroup.querySelector('.success-icon');
+            formGroup.classList.remove('has-success');
+            successIcon.classList.remove('show');
+        }
+
+        function validateLoginEmail() {
+            const value = loginEmailInput.value.trim();
+            if (value === '') {
+                showError(loginEmailInput, "El email no puede estar vacío");
+                hideSuccess(loginEmailInput);
+                return false;
+            } else if (!emailRegex.test(value)) {
+                showError(loginEmailInput, "Formato de email no válido");
+                hideSuccess(loginEmailInput);
+                return false;
+            } else {
+                hideError(loginEmailInput);
+                showSuccess(loginEmailInput);
+                return true;
+            }
+        }
+
+        function validateLoginPassword() {
+            const value = loginPasswordInput.value.trim();
+            if (value === '') {
+                showError(loginPasswordInput, "La contraseña no puede estar vacía");
+                hideSuccess(loginPasswordInput);
+                return false;
+            } else if (value.length < 6) {
+                showError(loginPasswordInput, "La contraseña debe tener al menos 6 caracteres");
+                hideSuccess(loginPasswordInput);
+                return false;
+            } else {
+                hideError(loginPasswordInput);
+                showSuccess(loginPasswordInput);
+                return true;
+            }
+        }
+
+        // Real-time validation
+        loginEmailInput.addEventListener('blur', validateLoginEmail);
+        loginPasswordInput.addEventListener('blur', validateLoginPassword);
+
+        // Input validation (while typing)
+        loginEmailInput.addEventListener('input', function () {
+            if (loginEmailInput.classList.contains('error')) {
+                validateLoginEmail();
+            }
+        });
+
+        loginPasswordInput.addEventListener('input', function () {
+            if (loginPasswordInput.classList.contains('error')) {
+                validateLoginPassword();
+            }
+        });
+
+        // Clear errors on focus
+        loginEmailInput.addEventListener('focus', () => {
+            hideError(loginEmailInput);
+            hideSuccess(loginEmailInput);
+        });
+        loginPasswordInput.addEventListener('focus', () => {
+            hideError(loginPasswordInput);
+            hideSuccess(loginPasswordInput);
+        });
+
+        // Form submission
+        loginSubmitButton.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const isEmailValid = validateLoginEmail();
+            const isPasswordValid = validateLoginPassword();
+
+            if (isEmailValid && isPasswordValid) {
+                // Form is valid, you can submit it here
+                console.log('Login form is valid, ready to submit');
+                alert('Login successful!');
+            } else {
+                console.log('Login form has errors');
+            }
+        });
+    }
+});
