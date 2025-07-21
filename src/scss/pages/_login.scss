@@ -1,5 +1,6 @@
 @use "../abstracts/_variables" as *;
 @use "../abstracts/_mixins" as *;
+@use "../base/_animations" as *;
 
 .login__section {
   max-width: 480px;

@@ -2,7 +2,6 @@
 @use "../abstracts/_mixins" as *;
 
 .hero__section {
-  // Background con gradiente y patrón geométrico
   background-color: rgba(#a3bbb8, 0.7);
 
   position: relative;
@@ -106,7 +105,6 @@
     }
   }
 
-  // Versión desktop: layout lado a lado
   @include breakpoint(desktop) {
     padding: 4rem 0;
 

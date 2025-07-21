@@ -2,7 +2,6 @@
 @use "../abstracts/_mixins" as *;
 
 .team__section {
-  // Sección de equipo mejorada con diseño moderno
   background: linear-gradient(
     135deg,
     rgba(#a3bbb8, 0.8) 0%,
@@ -67,7 +66,6 @@
     position: relative;
     overflow: hidden;
 
-    // Efecto hover mejorado
     &:hover {
       transform: translateY(-10px);
       box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
@@ -81,7 +79,7 @@
       }
     }
 
-    // Efecto de borde gradiente
+    // borde gradiente decorativo
     &::before {
       content: "";
       position: absolute;

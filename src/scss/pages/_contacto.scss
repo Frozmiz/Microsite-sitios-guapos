@@ -1,5 +1,6 @@
 @use "../abstracts/_variables" as *;
 @use "../abstracts/_mixins" as *;
+@use "../base/_animations" as *;
 
 div.div-contacto__layout {
   display: flex;
@@ -41,7 +42,7 @@ div.div-contacto__layout {
   display: inline-block;
 }
 
-// Estilos del formulario
+// Formulario
 
 .contacto__section-p {
   font-size: 1.15rem;
