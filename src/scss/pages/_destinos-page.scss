@@ -152,6 +152,12 @@
     font-weight: 400;
     /* Sin fondo ni caja */
     padding: 0;
+
+    &:first-of-type {
+      border-bottom: 1px solid $green-blue;
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+    }
   }
 
   @include breakpoint(desktop) {
